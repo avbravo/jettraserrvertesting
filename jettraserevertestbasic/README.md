@@ -1,23 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-package com.jettraservertest.main;
+# Jettra ServerBasic
 
-import com.jettraserver.JettraServer;
-import com.jettraserver.health.JettraHealthController;
-import com.jettraservertest.configuration.JakartaRestConfiguration;
-import com.jettraservertest.controller.EmployeeController;
-import com.jettraservertest.controller.HelloController;
-import jakarta.inject.Inject;
-import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.concurrent.ExecutionException;
+# Jettra Server
 
-/**
- *
- * @author avbravo
- */
+```shell
+
+mvn clean package -Pexec
+
+java -jar target/jettraserver.jar
+
+
+
+```
+
+
+
+1. Importe la libreria a su proyecto Java SE
+2. Crea el archivo src/main/resources/META-INF/beans.xml
+3.Crea el archivo src/main/resources/META-INF/microprofile-config.properties
+
+En el metodo main
+
+```java
+
 public class Main {
 
 
@@ -94,3 +98,43 @@ public class Main {
 //                .start();
     }
 }
+
+
+```
+
+---
+
+## Con HTTPS/TLSv1.2
+
+```java
+  JettraServer persona = new JettraServer.Builder()
+                .protocol("HTTPS")
+                .host("localhost")
+                .port(8080)
+                .tls("TLSv1.2")
+                .application(
+                        new JakartaRestConfiguration() {
+                    @Override
+                    public Set<Class<?>> getClasses() {
+                        Set<Class<?>> classes = new HashSet<>();
+                        classes.add(EmployeeController.class);
+                        classes.add(HelloController.class);
+                        return classes;
+                    }
+                }
+                )
+                .start();
+
+```
+
+
+
+```shell
+
+mvn clean package -Pexec
+
+java -jar target/jettraserver.jar
+
+
+
+```

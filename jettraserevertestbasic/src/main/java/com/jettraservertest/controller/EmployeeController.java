@@ -24,14 +24,8 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-import org.eclipse.microprofile.openapi.annotations.Operation;
-import org.eclipse.microprofile.openapi.annotations.media.Content;
-import org.eclipse.microprofile.openapi.annotations.media.Schema;
-import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
-import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Path("/employees")
 @ApplicationScoped
@@ -47,11 +41,11 @@ public class EmployeeController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-       @Operation(summary = "Obtiene todos los proyectoes", description = "Retorna todos los proyectoes disponibles")
-    @APIResponse(responseCode = "500", description = "Servidor inalcanzable")
-    @APIResponse(responseCode = "200", description = "Los proyectoes")
-    @Tag(name = "BETA", description = "Esta api esta en desarrollo")
-    @APIResponse(description = "Employyee", responseCode = "200", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Collection.class, readOnly = true, description = "employees", required = true, name = "employees")))
+//       @Operation(summary = "Obtiene todos los proyectoes", description = "Retorna todos los proyectoes disponibles")
+//    @APIResponse(responseCode = "500", description = "Servidor inalcanzable")
+//    @APIResponse(responseCode = "200", description = "Los proyectoes")
+//    @Tag(name = "BETA", description = "Esta api esta en desarrollo")
+//    @APIResponse(description = "Employyee", responseCode = "200", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Collection.class, readOnly = true, description = "employees", required = true, name = "employees")))
     public Response getAll() {
         List<Employee> result = employeeService.getAllEmployees();
         return Response.ok(result).build();

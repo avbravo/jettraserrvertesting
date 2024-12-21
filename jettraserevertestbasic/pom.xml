@@ -34,5 +34,63 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>21</maven.compiler.release>
         <exec.mainClass>com.jettraservertest.main.Main</exec.mainClass>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
     </properties>
+    
+    <build>
+        <finalName>${project.name}</finalName>
+    </build>
+    <profiles>
+        <profile>
+            <id>exec</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-shade-plugin</artifactId>
+                        <version>3.3.0</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>shade</goal>
+                                </goals>
+                                <configuration>
+                                    <source>21</source>
+                                    <target>21</target>
+                                    <archive>
+                                        <manifest>
+                                            <mainClass>com.jettraservertest.main.Main</mainClass>
+                                        </manifest>
+                                    </archive>
+                                    <shadedArtifactAttached>false</shadedArtifactAttached>
+                                    <transformers>
+                                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                            <mainClass>com.jettraservertest.main.Main</mainClass>
+                                        </transformer>
+                                        <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                            <resource>META-INF/services/jakarta.ws.rs.ext.RuntimeDelegate</resource>
+                                        </transformer>
+                                    </transformers>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+              
+                    <!--      <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-jar-plugin</artifactId>
+                      <version>3.4.1</version>
+                      <configuration>
+                        <archive>
+                          <manifest>
+                            <mainClass>com.jettraservertest.main.Main</mainClass>
+                          </manifest>
+                        </archive>
+                      </configuration>
+                    </plugin>-->
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
