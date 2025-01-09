@@ -11,6 +11,8 @@
             <artifactId>jettraserver</artifactId>
             <version>0.1.1</version>
         </dependency>
+        
+        
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,6 +40,51 @@
                     </resources>
                 </configuration>
             </plugin>
+            
+             <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>3.7.1</version>
+            <configuration>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+                 <archive>
+            <manifest>
+              <mainClass>com.avbravo.jettraserverhelloworld.start.Start</mainClass>
+            </manifest>
+          </archive>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                    <phase>package</phase> <!-- bind to the packaging phase -->
+                    <goals>
+                        <goal>single</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+
+<!--
+este
+-->
+<!--            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>-->
+            
           
         </plugins>
     </build>
