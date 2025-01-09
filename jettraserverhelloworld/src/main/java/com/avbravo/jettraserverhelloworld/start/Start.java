@@ -25,30 +25,6 @@ public class Start {
           /**
          * Con RootPath
          */
-        JettraServer local = new JettraServer.Builder()
-                .protocol("HTTP")
-                .host("localhost")
-                .port(8080)
-                .rootPath("api")
-                .logo(Boolean.TRUE)
-                .application(
-                        new JakartaRestConfiguration() {
-                    @Override
-                    public Set<Class<?>> getClasses() {
-                        Set<Class<?>> classes = new HashSet<>();
-                        classes.add(EmployeeController.class);
-                        classes.add(HelloController.class);
-                        classes.add(JettraHealthController.class);
-                        return classes;
-                    }
-                }
-                )
-                .jaxRun();
-        
-        
-        /**
-         * Con RootPath
-         */
 //        JettraServer local = new JettraServer.Builder()
 //                .protocol("HTTP")
 //                .host("localhost")
@@ -67,7 +43,31 @@ public class Start {
 //                    }
 //                }
 //                )
-//                .start();
+//                .jaxRun();
+//        
+        
+        /**
+         * Con RootPath
+         */
+        JettraServer local = new JettraServer.Builder()
+                .protocol("HTTP")
+                .host("localhost")
+                .port(8080)
+                .rootPath("api")
+                .logo(Boolean.TRUE)
+                .application(
+                        new JakartaRestConfiguration() {
+                    @Override
+                    public Set<Class<?>> getClasses() {
+                        Set<Class<?>> classes = new HashSet<>();
+                        classes.add(EmployeeController.class);
+                        classes.add(HelloController.class);
+                        classes.add(JettraHealthController.class);
+                        return classes;
+                    }
+                }
+                )
+                .start();
 // http://localhost:8080/api/jettrahello       
 
         /**
