@@ -99,6 +99,7 @@ public class EmployeeView {
 
 <script>
     $(document).ready(function () {
+                   alert('read function avbravo');`)
         // Fetch all employees and display them
         function loadEmployees() {
                    alert('function');
@@ -133,22 +134,7 @@ public class EmployeeView {
 
         loadEmployees();
 
-        function loadDepartment() {
-            $.ajax({
-                url: 'resources/api/department',
-                method: 'GET',
-                contentType: 'application/json',
-                success: function (data) {
-                    var departmentSelect = $('#departmentSelect');
-                    departmentSelect.empty();
-                    data.forEach(function (department) {
-                        var option = '<option value="' + department.departmentID + '">' + department.name + '</option>';
-                        departmentSelect.append(option);
-                    });
-                }
-            });
-        }
-        loadDepartment();
+       
 
         // Open modal for new employee
         $('#newEmployeeButton').on('click', function () {
