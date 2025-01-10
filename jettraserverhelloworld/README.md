@@ -254,3 +254,29 @@ public class WelcomeView {
 ---
 
 
+# Cambiar en el jmoordbcore
+
+## En CountryRepositoryImpl.java
+
+```java
+
+ @Inject
+    Config config;
+    @Inject
+    @ConfigProperty(name = "mongodb.database")
+    String mongodbDatabase;
+
+```
+
+
+por
+
+
+```java
+ Config config = ConfigProvider.getConfig();
+
+        String mongodbDatabase= config.getValue("mongodb.database", String.class);
+
+
+
+```
