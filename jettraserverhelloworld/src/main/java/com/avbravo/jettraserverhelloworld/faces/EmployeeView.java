@@ -28,7 +28,6 @@ public class EmployeeView {
     @Consumes(MediaType.TEXT_HTML)
 
     public Response get() {
-        System.out.println("... llego  viewemployee");
         var html = """
          <div class="container mt-5">
     <h1 class="mb-4">Employee</h1>
@@ -243,6 +242,26 @@ public class EmployeeView {
     });
 </script>
 
+
+                   <script
+                     src="https://unpkg.com/vue@3/dist/vue.global.js">
+                   </script>
+                   
+                   <script>
+                   
+                     const app = Vue.createApp({
+                       data() {
+                         return {
+                           message: "Hello World!"
+                         }
+                       }
+                     })
+                   
+                    app.mount('#app')
+                   
+                   </script>
+                   
+                   <div id="app"></div>
            """;
         return Response.ok(html).build();
     }

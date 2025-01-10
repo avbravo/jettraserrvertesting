@@ -72,6 +72,8 @@ java -jar fatjar-example-1.0.0.one-jar.jar
 
 ## Java generador HTML libreria
 
+integrar vue.js
+
 # enpoint
 
 http://localhost:8080/api/employees
