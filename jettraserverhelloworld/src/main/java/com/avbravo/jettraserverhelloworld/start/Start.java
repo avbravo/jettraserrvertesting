@@ -6,11 +6,11 @@ package com.avbravo.jettraserverhelloworld.start;
 import com.avbravo.jettraserverhelloworld.configuration.JakartaRestConfiguration;
 import com.avbravo.jettraserverhelloworld.controller.EmployeeController;
 import com.avbravo.jettraserverhelloworld.controller.HelloController;
-import com.avbravo.jettraserverhelloworld.faces.AboutView;
-import com.avbravo.jettraserverhelloworld.faces.EmployeeView;
-import com.avbravo.jettraserverhelloworld.faces.HomeView;
-import com.avbravo.jettraserverhelloworld.faces.HtmlController;
-import com.avbravo.jettraserverhelloworld.faces.TemplateView;
+import com.avbravo.jettraserverhelloworld.view.EmpleadoView;
+import com.avbravo.jettraserverhelloworld.view.template.AboutView;
+import com.avbravo.jettraserverhelloworld.view.HomeView;
+import com.avbravo.jettraserverhelloworld.view.J2htmlView;
+import com.avbravo.jettraserverhelloworld.view.template.TemplateView;
 import com.jettraserver.JettraServer;
 import com.jettraserver.health.JettraHealthController;
 import java.io.IOException;
@@ -68,20 +68,20 @@ public class Start {
                 .port(8080)
                 .rootPath("api")
                 .logo(Boolean.TRUE)
-                .application(
-                        new JakartaRestConfiguration() {
+                .application(new JakartaRestConfiguration() {
                     @Override
                     public Set<Class<?>> getClasses() {
                         Set<Class<?>> classes = new HashSet<>();
                         classes.add(EmployeeController.class);
                         classes.add(HelloController.class);
-                        classes.add(HtmlController.class);
+                        classes.add(JettraHealthController.class);
+
                         classes.add(TemplateView.class);
                         classes.add(HomeView.class);
-                       classes.add(AboutView.class);
+                        classes.add(AboutView.class);
 
-                        classes.add(EmployeeView.class);
-                        classes.add(JettraHealthController.class);
+                        classes.add(EmpleadoView.class);
+                        classes.add(J2htmlView.class);
                         return classes;
                     }
                 }

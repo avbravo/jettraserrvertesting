@@ -1,37 +1,6 @@
-package com.avbravo.jettraserverhelloworld.faces;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-import com.avbravo.jettraserverhelloworld.services.EmployeeService;
-import jakarta.inject.Inject;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
-
-/**
- *
- * @author avbravo
- */
-@Path("/view/employee")
-public class EmployeeView {
-
-    @Inject
-    EmployeeService employeeService;
-
-    @GET
-    @Produces(MediaType.TEXT_HTML)
-    @Consumes(MediaType.TEXT_HTML)
-
-    public Response get() {
-        var html = """
-         <div class="container mt-5">
-    <h1 class="mb-4">Employee</h1>
-    <p>Represents an employee in the organization.</p>
+ <div class="container mt-5">
+    <h1 class="mb-4">Empleado</h1>
+    <p>Representa los empleados de la organizacion.</p>
     <button class="btn btn-success mb-4" id="newEmployeeButton">Add Employee</button>
     
     <!-- Employee Table -->
@@ -227,10 +196,3 @@ public class EmployeeView {
         };
     });
 </script>
-
-
-                
-           """;
-        return Response.ok(html).build();
-    }
-}

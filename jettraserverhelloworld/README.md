@@ -48,6 +48,13 @@ Replace planos:${project.version} with the actual image name and tag.
 That's it! You have successfully built and run the application in a Docker container.
 
 
+## Leer archivo resources MAven
+
+```java
+myFeatures.properties property file inside src/main/resources
+ou can try this.getClass.getResource("/myProperties/myFeatures.properties")
+this.getClass().getClassLoader().getResourceAsStream("myFeatures.properties");
+``
 
 
 
@@ -81,12 +88,17 @@ http://localhost:8080/api/employees
 
 # MVC
 
-Estudiar un proyecto generado con payara started
-
-http://localhost:8080/api/html
-
 Template
 http://localhost:8080/api/view/template
+
+
+
+Estudiar un proyecto generado con payara started
+
+* usar j2tml
+
+http://localhost:8080/api/j2html
+
 
 Employees
 http://localhost:8080/api/view/employee#
@@ -149,4 +161,96 @@ visualiza los datos de los empleados
 
 
 ```
+
+
+---
+
+# Leer archivo html de manera directa
+
+Pasos:
+0.  Pruebe el endpoint
+
+http://localhost:8080/api/view/welcome
+
+
+1. Cree el directorio com.web.pages dentro de src/main/resources
+   quedaria
+   /src/main/resources/com/web/pages
+
+2. Alli coloque las paginas html correspondientes a los view que desea importar
+
+3. Cree la clase WelcomeView.java en el paquete view
+   Observe que se llama al archivo welcome.html para cargar todo el contenido.
+
+```java
+
+package com.avbravo.jettraserverhelloworld.view;
+
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ *
+ * @author avbravo
+ */
+@Path("/view/welcome")
+public class WelcomeView {
+
+    @GET
+    @Produces(MediaType.TEXT_HTML)
+    @Consumes(MediaType.TEXT_HTML)
+    public Response get() {
+ 
+         String text = "";
+        URL resource = getClass().getClassLoader().getResource("welcome.html");
+        if (resource == null) {
+            throw new IllegalArgumentException("file not found!");
+        } else {
+
+         
+
+            try {
+                var file1 = new File(resource.toURI());
+                Scanner myReader = new Scanner(file1);
+                while (myReader.hasNextLine()) {
+                    String data = myReader.nextLine();
+                    text += data;
+                    System.out.println(data);
+                }
+
+            } catch (URISyntaxException ex) {
+                Logger.getLogger(WelcomeView.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(WelcomeView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            // failed if files have whitespaces or special characters
+            //return new File(resource.getFile());
+            //return new File(resource.toURI());
+        }
+       
+        var html = """
+                   
+                       """;
+        html = text;
+        return Response.ok(html).build();
+    }
+}
+
+```
+
+---
+
 
