@@ -1,12 +1,16 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.avbravo.jettraserverhelloworld.start;
 
 import com.avbravo.jettraserverhelloworld.configuration.JakartaRestConfiguration;
 import com.avbravo.jettraserverhelloworld.controller.EmployeeController;
 import com.avbravo.jettraserverhelloworld.controller.HelloController;
+import com.avbravo.jettraserverhelloworld.faces.AboutView;
+import com.avbravo.jettraserverhelloworld.faces.EmployeeView;
+import com.avbravo.jettraserverhelloworld.faces.HomeView;
+import com.avbravo.jettraserverhelloworld.faces.HtmlController;
+import com.avbravo.jettraserverhelloworld.faces.TemplateView;
 import com.jettraserver.JettraServer;
 import com.jettraserver.health.JettraHealthController;
 import java.io.IOException;
@@ -20,7 +24,7 @@ import java.util.concurrent.ExecutionException;
  */
 public class Start {
 
-     public static void main(String[] args) throws InterruptedException, ExecutionException, IOException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException, IOException {
 //SeBootstrap.start(JakartaRestConfiguration.class)
 //        .thenApply(instance -> {
 //            instance.stopOnShutdown((stopResult -> System.out.println("Container has stopped.")));
@@ -32,7 +36,7 @@ public class Start {
 //            }
 //            return instance;
 //        }).toCompletableFuture().get();
-          /**
+        /**
          * Con RootPath
          */
 //        JettraServer local = new JettraServer.Builder()
@@ -54,8 +58,7 @@ public class Start {
 //                }
 //                )
 //                .jaxRun();
-        
-        
+
         /**
          * Con RootPath
          */
@@ -72,6 +75,12 @@ public class Start {
                         Set<Class<?>> classes = new HashSet<>();
                         classes.add(EmployeeController.class);
                         classes.add(HelloController.class);
+                        classes.add(HtmlController.class);
+                        classes.add(TemplateView.class);
+                        classes.add(HomeView.class);
+                       classes.add(AboutView.class);
+
+                        classes.add(EmployeeView.class);
                         classes.add(JettraHealthController.class);
                         return classes;
                     }
