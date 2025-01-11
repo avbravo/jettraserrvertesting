@@ -41,11 +41,6 @@ public class EmployeeController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-//       @Operation(summary = "Obtiene todos los proyectoes", description = "Retorna todos los proyectoes disponibles")
-//    @APIResponse(responseCode = "500", description = "Servidor inalcanzable")
-//    @APIResponse(responseCode = "200", description = "Los proyectoes")
-//    @Tag(name = "BETA", description = "Esta api esta en desarrollo")
-//    @APIResponse(description = "Employyee", responseCode = "200", content = @Content(mediaType = MediaType.APPLICATION_JSON, schema = @Schema(implementation = Collection.class, readOnly = true, description = "employees", required = true, name = "employees")))
     public Response getAll() {
         List<Employee> result = employeeService.getAllEmployees();
         return Response.ok(result).build();

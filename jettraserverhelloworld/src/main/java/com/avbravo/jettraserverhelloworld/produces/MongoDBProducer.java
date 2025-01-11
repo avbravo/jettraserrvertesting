@@ -15,11 +15,9 @@ import com.mongodb.client.MongoClients;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Disposes;
 import jakarta.enterprise.inject.Produces;
-import jakarta.inject.Inject;
 import java.io.Serializable;
 import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.ConfigProvider;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 @ApplicationScoped
 @DateSupport(jakartaSource = JakartaSource.JAKARTA)

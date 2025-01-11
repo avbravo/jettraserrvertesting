@@ -6,42 +6,41 @@ package com.avbravo.jettraserverhelloworld.controller;
 
 import com.avbravo.jettraserverhelloworld.model.Country;
 import com.avbravo.jettraserverhelloworld.repository.CountryRepository;
-import com.avbravo.jettraserverhelloworld.repository.HistoryRepository;
-import jakarta.annotation.security.RolesAllowed;
+import com.avbravo.jettraserverhelloworld.repository.CountryRepositoryImpl;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
  * @author avbravo
  */
-@Path("country")
-//@RolesAllowed({"admin"})
+@Path("/country")
+@ApplicationScoped
 public class CountryController {
 
     
-    // <editor-fold defaultstate="collapsed" desc="Inject">
+
     @Inject
     CountryRepository countryRepository;
-    
- 
-     @Inject
-HistoryRepository historyRepository;
-
-// </editor-fold>
 
 
-    // <editor-fold defaultstate="collapsed" desc="findAll">
+
+
     @GET
-    @RolesAllowed({"admin"})
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-     public List<Country> findAll() {
-        
-        return countryRepository.findAll();
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+     public Response findAll() {
+//        List<Country> result = new ArrayList<>();
+     List<Country> result = countryRepository.findAll();
+               return Response.ok(result).build();
     }
 // </editor-fold>
 

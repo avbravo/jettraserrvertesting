@@ -85,7 +85,7 @@ integrar vue.js
 
 http://localhost:8080/api/employees
 
-
+http://localhost:8080/api/country
 # MVC
 
 Template
@@ -280,3 +280,9 @@ por
 
 
 ```
+
+
+## Iconos
+
+[https://icons.getbootstrap.com/](https://icons.getbootstrap.com/)
+

@@ -4,7 +4,9 @@
  */
 package com.avbravo.jettraserverhelloworld.view;
 
+import com.avbravo.jettraserverhelloworld.model.Country;
 import com.avbravo.jettraserverhelloworld.model.Employee;
+import com.avbravo.jettraserverhelloworld.repository.CountryRepository;
 import com.avbravo.jettraserverhelloworld.services.EmployeeService;
 import com.jettraserver.definition.JettraView;
 import jakarta.ws.rs.Path;
@@ -17,22 +19,21 @@ import jakarta.inject.Inject;
  *
  * @author avbravo
  */
-@Path("/view/j2html")
-public class J2htmlView implements JettraView{
+@Path("/view/jmoordbj2html")
+public class JmoordbJ2htmlView implements JettraView{
   @Inject
-    EmployeeService employeeService;
+    CountryRepository countryRepository;
   
     @Override
     public Response draw() {
-        List<Employee> result = employeeService.getAllEmployees();
+        List<Country> result = countryRepository.findAll();
         var bod = body(
-                div(attrs("#employees"),
+                div(attrs("#country"),
                         p("Some sibling element"),
-                        each(filter(result, employee -> employee != null), employee
-                                -> div(attrs(".employee"),
-                                h2(employee.getFirstname()),
-                                img().withSrc(employee.getJobTitle()),
-                                p(employee.getLastname())
+                        each(filter(result, country -> country != null), country
+                                -> div(attrs(".country"),
+                                h2(country.getIdcountry()),
+                                p(country.getCountry())
                         )
                         )
                 )
