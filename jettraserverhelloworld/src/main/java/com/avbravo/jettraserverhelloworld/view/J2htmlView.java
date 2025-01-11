@@ -6,7 +6,7 @@ package com.avbravo.jettraserverhelloworld.view;
 
 import com.avbravo.jettraserverhelloworld.model.Employee;
 import com.avbravo.jettraserverhelloworld.services.EmployeeService;
-import com.jettraserver.definition.JettraView;
+import com.jettraserver.view.JettraView;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Response;
 import java.util.List;

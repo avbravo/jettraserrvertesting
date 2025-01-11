@@ -8,6 +8,7 @@ package com.avbravo.jettraserverhelloworld.controller;
  *
  * @author avbravo
  */
+import com.jettraserver.config.JettraConfig;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
@@ -15,10 +16,11 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import java.io.Serializable;
 
 @Path("/hello")
 @ApplicationScoped
-public class HelloController {
+public class HelloController implements Serializable, JettraConfig{
   
 
     @GET

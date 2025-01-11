@@ -8,6 +8,7 @@ package com.avbravo.jettraserverhelloworld.produces;
  *
  * @author avbravo
  */
+import com.jettraserver.config.JettraConfig;
 import com.jmoordb.core.annotation.DateSupport;
 import com.jmoordb.core.annotation.enumerations.JakartaSource;
 import com.mongodb.client.MongoClient;
@@ -16,27 +17,22 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Disposes;
 import jakarta.enterprise.inject.Produces;
 import java.io.Serializable;
-import org.eclipse.microprofile.config.Config;
-import org.eclipse.microprofile.config.ConfigProvider;
 
 @ApplicationScoped
 @DateSupport(jakartaSource = JakartaSource.JAKARTA)
-public class MongoDBProducer implements Serializable {
+public class MongoDBProducer implements Serializable, JettraConfig {
 
 //    @Inject
 //    private Config config;
 //    @Inject
 //    @ConfigProperty(name = "mongodb.uri")
 //    private String mongodburi;
-    
-     Config config = ConfigProvider.getConfig();
+private String mongodburi =getMicroprofileConfig("mongodb.uri");
 
-        String mongodburi= config.getValue("mongodburi", String.class);
 
     @Produces
     @ApplicationScoped
-    public MongoClient mongoClient() {
-       
+    public MongoClient mongoClient() {      
         MongoClient mongoClient = MongoClients.create(mongodburi);
        return mongoClient;
 

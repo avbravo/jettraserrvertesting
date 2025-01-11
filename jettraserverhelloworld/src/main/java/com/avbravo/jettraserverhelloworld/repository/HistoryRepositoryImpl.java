@@ -44,12 +44,13 @@ import com.jmoordb.core.model.Sorted;
 import com.jmoordb.core.util.JmoordbCoreDateUtil;
 import java.util.HashSet;
 import com.avbravo.jettraserverhelloworld.model.History;
+import com.jettraserver.config.JettraConfig;
 import org.eclipse.microprofile.config.ConfigProvider;
 
 
 // </editor-fold>
 @ApplicationScoped
-public class HistoryRepositoryImpl  implements HistoryRepository{
+public class HistoryRepositoryImpl  implements HistoryRepository, JettraConfig {
 // <editor-fold defaultstate="collapsed" desc="inject">
 
     @Inject
@@ -62,10 +63,7 @@ public class HistoryRepositoryImpl  implements HistoryRepository{
 //    @Inject
 //    @ConfigProperty(name = "mongodb.databasehistory")
 //    String mongodbDatabase;
-
-       Config config = ConfigProvider.getConfig();
-
-        String mongodbDatabase= config.getValue("mongodb.databasehistory", String.class);
+String mongodbDatabase =getMicroprofileConfig("mongodb.databasehistory");
     
     String mongodbCollection = "history";
 /**

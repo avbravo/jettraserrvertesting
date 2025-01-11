@@ -7,6 +7,7 @@ package com.avbravo.jettraserverhelloworld.controller;
 import com.avbravo.jettraserverhelloworld.model.Country;
 import com.avbravo.jettraserverhelloworld.repository.CountryRepository;
 import com.avbravo.jettraserverhelloworld.repository.CountryRepositoryImpl;
+import com.jettraserver.config.JettraConfig;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
@@ -15,6 +16,7 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +26,7 @@ import java.util.List;
  */
 @Path("/country")
 @ApplicationScoped
-public class CountryController {
+public class CountryController implements Serializable, JettraConfig{
 
     
 
@@ -38,9 +40,15 @@ public class CountryController {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
      public Response findAll() {
-//        List<Country> result = new ArrayList<>();
-     List<Country> result = countryRepository.findAll();
+         try {
+                 List<Country> result = countryRepository.findAll();
                return Response.ok(result).build();
+        } catch (Exception e) {
+            return  Response.ok(e.getLocalizedMessage().toString()).build();
+        }
+         
+//        List<Country> result = new ArrayList<>();
+
     }
 // </editor-fold>
 

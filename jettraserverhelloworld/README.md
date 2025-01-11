@@ -286,3 +286,115 @@ por
 
 [https://icons.getbootstrap.com/](https://icons.getbootstrap.com/)
 
+
+
+---
+
+# Leer Microprofile-config.properties
+
+ Para leer las propiedades del archivo src/main/resources/META-INF/microprofile-config.properties, usamos la siguiente guia.
+
+* No usaremos @InjectPara evitar el uso a nivel de Java SE
+
+```java
+
+//    @Inject
+//    private Config config;
+//    @Inject
+//    @ConfigProperty(name = "mongodb.uri")
+//    private String mongodburi;
+
+```
+
+* En su lugar las clases deben  implementar JettraConfig
+
+````java
+
+import com.jettraserver.config.JettraConfig;
+@ApplicationScoped
+@DateSupport(jakartaSource = JakartaSource.JAKARTA)
+public class MongoDBProducer implements Serializable, JettraConfig {
+}
+
+```
+
+* Para leer las propiedades utilice el metodo getMicroprofileConfig("propiedad");
+
+```java   
+import com.jettraserver.config.JettraConfig;
+import com.jmoordb.core.annotation.DateSupport;
+import com.jmoordb.core.annotation.enumerations.JakartaSource;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Disposes;
+import jakarta.enterprise.inject.Produces;
+import java.io.Serializable;
+
+@ApplicationScoped
+@DateSupport(jakartaSource = JakartaSource.JAKARTA)
+public class MongoDBProducer implements Serializable, JettraConfig {
+
+//    @Inject
+//    private Config config;
+//    @Inject
+//    @ConfigProperty(name = "mongodb.uri")
+//    private String mongodburi;
+private String mongodburi =getMicroprofileConfig("mongodb.uri");
+
+
+    @Produces
+    @ApplicationScoped
+    public MongoClient mongoClient() {      
+        MongoClient mongoClient = MongoClients.create(mongodburi);
+       return mongoClient;
+
+    }
+
+    public void close(@Disposes final MongoClient mongoClient) {
+        mongoClient.close();
+    }
+
+}
+
+
+```
+
+Cambios a Realizar 
+
+- [ ] MongoDBProducer debe llevar JettraConfig
+
+- [ ] Modificar el framework y agregar nueva anotacion JettraConfig para indicar que debe generar JettraConfig en lugar de MicroprofileConfig.
+
+```java
+@Repository(entity = Country.class, JettraConfig = Boolean.TRUE)
+
+``
+
+- [ ] Todos los controller deben llevar JettraConfig
+
+- [ ] En todos los repositorios generados **RepositoryImpl** que se generan deben implementar JettraConfig
+
+      * Agregar import com.jettraserver.config.JettraConfig;
+      * Cambiar
+```java
+
+/**
+* Microprofile Config
+*/
+//    @Inject
+//    Config config;
+//    @Inject
+//    @ConfigProperty(name = "mongodb.database")
+//    String mongodbDatabase;
+
+```
+
+por
+
+```java
+
+String mongodbDatabase =getMicroprofileConfig("mongodb.database");
+
+```
+

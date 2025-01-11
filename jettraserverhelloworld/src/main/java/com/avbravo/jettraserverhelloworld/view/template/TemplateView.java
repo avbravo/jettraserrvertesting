@@ -5,7 +5,7 @@ package com.avbravo.jettraserverhelloworld.view.template;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 import com.avbravo.jettraserverhelloworld.services.EmployeeService;
-import com.jettraserver.definition.JettraView;
+import com.jettraserver.view.JettraView;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;

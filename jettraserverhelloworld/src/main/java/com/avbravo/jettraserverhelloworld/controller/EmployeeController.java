@@ -10,6 +10,7 @@ package com.avbravo.jettraserverhelloworld.controller;
  */
 import com.avbravo.jettraserverhelloworld.model.Employee;
 import com.avbravo.jettraserverhelloworld.services.EmployeeService;
+import com.jettraserver.config.JettraConfig;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
@@ -22,6 +23,7 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import java.io.Serializable;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -29,7 +31,7 @@ import java.util.Optional;
 
 @Path("/employees")
 @ApplicationScoped
-public class EmployeeController {
+public class EmployeeController implements Serializable, JettraConfig{
 
 //       @Inject
 //    @ConfigProperty(name = "defaultName")

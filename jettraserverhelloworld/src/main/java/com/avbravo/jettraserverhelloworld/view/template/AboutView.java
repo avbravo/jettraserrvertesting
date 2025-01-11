@@ -4,7 +4,7 @@
  */
 package com.avbravo.jettraserverhelloworld.view.template;
 
-import com.jettraserver.definition.JettraView;
+import com.jettraserver.view.JettraView;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Response;
 
