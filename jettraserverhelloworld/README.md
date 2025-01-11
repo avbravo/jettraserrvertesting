@@ -103,6 +103,9 @@ http://localhost:8080/api/j2html
 Employees
 http://localhost:8080/api/view/employee#
 
+http://localhost:8080/api/view/jmoordbj2html
+
+
 
 Clase HtmlController genera una pagina hmtl en el metodo get
 
