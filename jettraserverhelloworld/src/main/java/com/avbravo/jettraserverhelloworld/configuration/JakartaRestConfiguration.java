@@ -17,10 +17,4 @@ import java.util.Set;
 @ApplicationPath("api")
 public class JakartaRestConfiguration extends Application {
 
-//  @Override
-//    public Set<Class<?>> getClasses() {
-//        return Set.of(EmployeeController.class,
-//                HelloController.class);
-//    }
-
 }

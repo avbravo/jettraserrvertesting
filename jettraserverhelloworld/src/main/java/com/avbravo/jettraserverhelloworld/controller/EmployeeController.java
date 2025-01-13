@@ -33,10 +33,6 @@ import java.util.Optional;
 @ApplicationScoped
 public class EmployeeController implements Serializable, JettraConfig{
 
-//       @Inject
-//    @ConfigProperty(name = "defaultName")
-//    private String defaultName;
-       
      @Inject
     EmployeeService employeeService;
 

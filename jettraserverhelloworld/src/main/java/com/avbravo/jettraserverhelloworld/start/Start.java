@@ -27,6 +27,39 @@ import java.util.concurrent.ExecutionException;
 public class Start {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException, IOException {
+        
+              /**
+         * Con RootPath
+         */
+        JettraServer local = new JettraServer.Builder()
+                .protocol("HTTP")
+                .host("localhost")
+                .port(8080)
+                .rootPath("api")
+                .logo(Boolean.TRUE)
+                .application(new JakartaRestConfiguration() {
+                    @Override
+                    public Set<Class<?>> getClasses() {
+                        Set<Class<?>> classes = new HashSet<>();
+                        classes.add(EmployeeController.class);
+                        classes.add(HelloController.class);
+                        classes.add(CountryController.class);
+                        classes.add(JettraHealthController.class);
+
+                        classes.add(TemplateView.class);
+                        classes.add(HomeView.class);
+                        classes.add(AboutView.class);
+
+                        classes.add(EmpleadoView.class);
+                        classes.add(J2htmlView.class);
+                        classes.add(JmoordbJ2htmlView.class);
+                        return classes;
+                    }
+                }
+                )
+                .start();
+        
+        
 //SeBootstrap.start(JakartaRestConfiguration.class)
 //        .thenApply(instance -> {
 //            instance.stopOnShutdown((stopResult -> System.out.println("Container has stopped.")));
@@ -61,36 +94,7 @@ public class Start {
 //                )
 //                .jaxRun();
 
-        /**
-         * Con RootPath
-         */
-        JettraServer local = new JettraServer.Builder()
-                .protocol("HTTP")
-                .host("localhost")
-                .port(8080)
-                .rootPath("api")
-                .logo(Boolean.TRUE)
-                .application(new JakartaRestConfiguration() {
-                    @Override
-                    public Set<Class<?>> getClasses() {
-                        Set<Class<?>> classes = new HashSet<>();
-                        classes.add(EmployeeController.class);
-                        classes.add(HelloController.class);
-                        classes.add(CountryController.class);
-                        classes.add(JettraHealthController.class);
-
-                        classes.add(TemplateView.class);
-                        classes.add(HomeView.class);
-                        classes.add(AboutView.class);
-
-                        classes.add(EmpleadoView.class);
-                        classes.add(J2htmlView.class);
-                        classes.add(JmoordbJ2htmlView.class);
-                        return classes;
-                    }
-                }
-                )
-                .start();
+  
 // http://localhost:8080/api/jettrahello       
 
         /**
