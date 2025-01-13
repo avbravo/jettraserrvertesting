@@ -25,6 +25,8 @@ public class J2htmlView implements JettraView{
     @Override
     public Response draw() {
         List<Employee> result = employeeService.getAllEmployees();
+        
+        
         var bod = body(
                 div(attrs("#employees"),
                         p("Some sibling element"),

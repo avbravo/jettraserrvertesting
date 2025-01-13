@@ -37,7 +37,7 @@ public class CountryController implements Serializable, JettraConfig{
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-     public Response findAll() {
+     public Response findAll() {        
          try {
                  List<Country> result = countryRepository.findAll();
                return Response.ok(result).build();
@@ -45,7 +45,6 @@ public class CountryController implements Serializable, JettraConfig{
             return  Response.ok(e.getLocalizedMessage().toString()).build();
         }
          
-//        List<Country> result = new ArrayList<>();
 
     }
 // </editor-fold>

@@ -5,9 +5,7 @@
 package com.avbravo.jettraserverhelloworld.view;
 
 import com.avbravo.jettraserverhelloworld.model.Country;
-import com.avbravo.jettraserverhelloworld.model.Employee;
 import com.avbravo.jettraserverhelloworld.repository.CountryRepository;
-import com.avbravo.jettraserverhelloworld.services.EmployeeService;
 import com.jettraserver.view.JettraView;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Response;
@@ -20,10 +18,11 @@ import jakarta.inject.Inject;
  * @author avbravo
  */
 @Path("/view/jmoordbj2html")
-public class JmoordbJ2htmlView implements JettraView{
-  @Inject
+public class JmoordbJ2htmlView implements JettraView {
+
+    @Inject
     CountryRepository countryRepository;
-  
+
     @Override
     public Response draw() {
         List<Country> result = countryRepository.findAll();
@@ -38,12 +37,7 @@ public class JmoordbJ2htmlView implements JettraView{
                         )
                 )
         ).render();
-
         return Response.ok(bod).build();
-        
     }
-
-  
-
 //  
 }

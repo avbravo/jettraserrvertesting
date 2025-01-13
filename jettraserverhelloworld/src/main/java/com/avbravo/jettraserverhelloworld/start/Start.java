@@ -12,6 +12,7 @@ import com.avbravo.jettraserverhelloworld.view.template.AboutView;
 import com.avbravo.jettraserverhelloworld.view.HomeView;
 import com.avbravo.jettraserverhelloworld.view.J2htmlView;
 import com.avbravo.jettraserverhelloworld.view.JmoordbJ2htmlView;
+import com.avbravo.jettraserverhelloworld.view.TailwindView;
 import com.avbravo.jettraserverhelloworld.view.template.TemplateView;
 import com.jettraserver.JettraServer;
 import com.jettraserver.health.JettraHealthController;
@@ -31,9 +32,10 @@ public class Start {
               /**
          * Con RootPath
          */
+         String host="192.168.60.243";
         JettraServer local = new JettraServer.Builder()
                 .protocol("HTTP")
-                .host("localhost")
+                .host(host)
                 .port(8080)
                 .rootPath("api")
                 .logo(Boolean.TRUE)
@@ -46,6 +48,7 @@ public class Start {
                         classes.add(CountryController.class);
                         classes.add(JettraHealthController.class);
 
+                        classes.add(TailwindView.class);
                         classes.add(TemplateView.class);
                         classes.add(HomeView.class);
                         classes.add(AboutView.class);
