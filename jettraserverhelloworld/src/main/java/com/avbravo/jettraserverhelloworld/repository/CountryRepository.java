@@ -6,24 +6,23 @@ package com.avbravo.jettraserverhelloworld.repository;
 
 import com.avbravo.jettraserverhelloworld.model.Country;
 import com.jmoordb.core.annotation.enumerations.CaseSensitive;
+import com.jmoordb.core.annotation.enumerations.ConfigEngine;
 import com.jmoordb.core.annotation.enumerations.LikeByType;
 import com.jmoordb.core.annotation.enumerations.TypeOrder;
 import com.jmoordb.core.annotation.repository.Count;
 import com.jmoordb.core.annotation.repository.CountLikeBy;
-import com.jmoordb.core.annotation.repository.Find;
 import com.jmoordb.core.annotation.repository.LikeBy;
 import com.jmoordb.core.annotation.repository.Lookup;
 import com.jmoordb.core.annotation.repository.Repository;
 import com.jmoordb.core.model.Search;
 import com.jmoordb.core.repository.CrudRepository;
-import jakarta.enterprise.context.ApplicationScoped;
 import java.util.List;
 
 /**
  *
  * @author avbravo
  */
-@Repository(entity = Country.class)
+@Repository(entity = Country.class,configEngine = ConfigEngine.JETTRA_CONFIG)
 public interface CountryRepository extends CrudRepository<Country, String> {
 
 //    @Find 

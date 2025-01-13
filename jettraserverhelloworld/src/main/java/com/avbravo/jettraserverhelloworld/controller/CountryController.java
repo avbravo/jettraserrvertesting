@@ -6,7 +6,6 @@ package com.avbravo.jettraserverhelloworld.controller;
 
 import com.avbravo.jettraserverhelloworld.model.Country;
 import com.avbravo.jettraserverhelloworld.repository.CountryRepository;
-import com.avbravo.jettraserverhelloworld.repository.CountryRepositoryImpl;
 import com.jettraserver.config.JettraConfig;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -17,7 +16,6 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**

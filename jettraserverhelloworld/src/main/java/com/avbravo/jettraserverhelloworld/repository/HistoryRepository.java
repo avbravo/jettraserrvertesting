@@ -5,6 +5,7 @@
 package com.avbravo.jettraserverhelloworld.repository;
 
 import com.avbravo.jettraserverhelloworld.model.History;
+import com.jmoordb.core.annotation.enumerations.ConfigEngine;
 import com.jmoordb.core.annotation.repository.Count;
 import com.jmoordb.core.annotation.repository.Lookup;
 import com.jmoordb.core.annotation.repository.Repository;
@@ -16,7 +17,7 @@ import java.util.List;
  *
  * @author avbravo
  */
-@Repository(entity = History.class, database = "{mongodb.databasehistory")
+@Repository(entity = History.class, database = "{mongodb.databasehistory",configEngine = ConfigEngine.JETTRA_CONFIG)
 public interface HistoryRepository extends CrudRepository<History, Long>{
            @Lookup
 public List<History> lookup(Search search);
