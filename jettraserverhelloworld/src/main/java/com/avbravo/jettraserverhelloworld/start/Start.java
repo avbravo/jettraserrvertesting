@@ -15,7 +15,9 @@ import com.avbravo.jettraserverhelloworld.view.JmoordbJ2htmlView;
 import com.avbravo.jettraserverhelloworld.view.TailwindView;
 import com.avbravo.jettraserverhelloworld.view.template.TemplateView;
 import com.jettraserver.JettraServer;
+import com.jettraserver.enumerations.Protocol;
 import com.jettraserver.health.JettraHealthController;
+import jakarta.ws.rs.SeBootstrap.Configuration.SSLClientAuthentication;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
@@ -34,9 +36,10 @@ public class Start {
          */
          String host="localhost";
         JettraServer local = new JettraServer.Builder()
-                .protocol("HTTP")
+                .protocol(Protocol.HTTP)
                 .host(host)
                 .port(8080)
+                .sslClientAuthentication(SSLClientAuthentication.NONE)
                 .rootPath("api")
                 .logo(Boolean.TRUE)
                 .application(new JakartaRestConfiguration() {
@@ -60,7 +63,7 @@ public class Start {
                     }
                 }
                 )
-                .start();
+                .startNew();
         
         
 //SeBootstrap.start(JakartaRestConfiguration.class)
