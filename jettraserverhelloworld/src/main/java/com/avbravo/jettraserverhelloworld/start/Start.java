@@ -32,7 +32,7 @@ public class Start {
               /**
          * Con RootPath
          */
-         String host="192.168.60.243";
+         String host="localhost";
         JettraServer local = new JettraServer.Builder()
                 .protocol("HTTP")
                 .host(host)
