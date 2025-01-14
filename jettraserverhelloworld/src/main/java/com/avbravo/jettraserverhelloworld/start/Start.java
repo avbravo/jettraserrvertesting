@@ -39,6 +39,7 @@ public class Start {
                 .protocol(Protocol.HTTP)
                 .host(host)
                 .port(8080)
+                .runInternalTest(Boolean.FALSE)
                 .sslClientAuthentication(SSLClientAuthentication.NONE)
                 .rootPath("api")
                 .logo(Boolean.TRUE)
@@ -63,7 +64,7 @@ public class Start {
                     }
                 }
                 )
-                .startNew();
+                .start();
         
         
 //SeBootstrap.start(JakartaRestConfiguration.class)
