@@ -60,35 +60,35 @@ public class StartTest {
     public void testMain() throws Exception {
         System.out.println("main");
          String host="localhost";
-        JettraServer local = new JettraServer.Builder()
-                .protocol(Protocol.HTTP)
-                .host(host)
-                .port(7070)
-                .sslClientAuthentication(SeBootstrap.Configuration.SSLClientAuthentication.NONE)
-                .rootPath("api")
-                .logo(Boolean.TRUE)
-                .application(new JakartaRestConfiguration() {
-                    @Override
-                    public Set<Class<?>> getClasses() {
-                        Set<Class<?>> classes = new HashSet<>();
-                        classes.add(EmployeeController.class);
-                        classes.add(HelloController.class);
-                        classes.add(CountryController.class);
-                        classes.add(JettraHealthController.class);
-
-                        classes.add(TailwindView.class);
-                        classes.add(TemplateView.class);
-                        classes.add(HomeView.class);
-                        classes.add(AboutView.class);
-
-                        classes.add(EmpleadoView.class);
-                        classes.add(J2htmlView.class);
-                        classes.add(JmoordbJ2htmlView.class);
-                        return classes;
-                    }
-                }
-                )
-                .startNew();
+//        JettraServer local = new JettraServer.Builder()
+//                .protocol(Protocol.HTTP)
+//                .host(host)
+//                .port(7070)
+//                .sslClientAuthentication(SeBootstrap.Configuration.SSLClientAuthentication.NONE)
+//                .rootPath("api")
+//                .logo(Boolean.TRUE)
+//                .application(new JakartaRestConfiguration() {
+//                    @Override
+//                    public Set<Class<?>> getClasses() {
+//                        Set<Class<?>> classes = new HashSet<>();
+//                        classes.add(EmployeeController.class);
+//                        classes.add(HelloController.class);
+//                        classes.add(CountryController.class);
+//                        classes.add(JettraHealthController.class);
+//
+//                        classes.add(TailwindView.class);
+//                        classes.add(TemplateView.class);
+//                        classes.add(HomeView.class);
+//                        classes.add(AboutView.class);
+//
+//                        classes.add(EmpleadoView.class);
+//                        classes.add(J2htmlView.class);
+//                        classes.add(JmoordbJ2htmlView.class);
+//                        return classes;
+//                    }
+//                }
+//                )
+//                .start();
         String[] args = null;
         Start.main(args);
         // TODO review the generated test code and remove the default call to fail.
