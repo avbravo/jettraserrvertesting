@@ -1,7 +1,9 @@
 <div class="container mt-5">
     <h1 class="mb-4">Empleado</h1>
     <p>Representa los empleados de la organizacion.</p>
-    <button class="btn btn-success mb-4" id="newEmployeeButton">Add Employee</button>
+    <form>   
+        <button class="btn btn-success mb-4" id="newEmployeeButton">Add Employee</button>
+    </form>
     <!-- Employee Table -->
     <table id="employeesTable" class="table table-bordered">
         <thead>
@@ -56,7 +58,16 @@
 
         loadEmployees();
 
-
+  // Open modal for new employee
+//        $('#newEmployeeButton').on('click', function () {
+////            $('#employeeForm')[0].reset();
+////            $('#employeeID').closest('.form-group').hide();
+////            $('#employeeModalLabel').text('Add Employee');
+////            $('#saveButton').show();
+////            $('#updateButton').hide();
+//            $('#employeeModal').modal('show');
+//            loadDepartment();
+//        });
 
     });
 
