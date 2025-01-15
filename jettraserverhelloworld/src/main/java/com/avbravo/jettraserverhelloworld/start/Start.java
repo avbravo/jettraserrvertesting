@@ -38,7 +38,7 @@ public class Start {
         JettraServer local = new JettraServer.Builder()
                 .protocol(Protocol.HTTP)
                 .host(host)
-                .port(8085)
+                .port(8080)
                 .runInternalTest(Boolean.FALSE)
                 .sslClientAuthentication(SSLClientAuthentication.NONE)
                 .rootPath("api")

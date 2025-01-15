@@ -56,7 +56,7 @@ ou can try this.getClass.getResource("/myProperties/myFeatures.properties")
 this.getClass().getClassLoader().getResourceAsStream("myFeatures.properties");
 ``
 
-
+## Multiples profiles Maven
 
 # maven-jar-plugin
 mvn clean package
@@ -76,7 +76,7 @@ java -jar fatjar-example-1.0.0.jar
 java -jar fatjar-example-1.0.0.one-jar.jar
 
 
-
+---
 ## Java generador HTML libreria
 
 integrar vue.js
