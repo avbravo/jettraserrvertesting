@@ -1,8 +1,7 @@
- <div class="container mt-5">
+<div class="container mt-5">
     <h1 class="mb-4">Empleado</h1>
     <p>Representa los empleados de la organizacion.</p>
     <button class="btn btn-success mb-4" id="newEmployeeButton">Add Employee</button>
-    
     <!-- Employee Table -->
     <table id="employeesTable" class="table table-bordered">
         <thead>
@@ -19,9 +18,17 @@
     </table>
 </div>
 
+<div class="modal fade" id="employeeModal" tabindex="-1" role="dialog" aria-labelledby="employeeModalLabel" aria-hidden="true">
+    <form id="employeeForm">
+        Hola  modal
+    </form>
+
+</div>
+
+
 <script>
-     $(document).ready(function () {
-          function loadEmployees() {
+    $(document).ready(function () {
+        function loadEmployees() {
             $.ajax({
                 url: 'http://localhost:8080/api/employees',
                 method: 'GET',
@@ -32,15 +39,15 @@
                     data.forEach(function (employee) {
                         console.log(employee);
                         var row = '<tr>' +
-                            '<td>' + employee.id + '</td>' +
-                            '<td>' + employee.firstname + '</td>' +
-                            '<td>' + employee.lastname + '</td>' +
-                            '<td>' + employee.jobTitle + '</td>' +
-                            '<td class="table-buttons">' +
-                            '<button class="btn btn-sm btn-primary mr-1" onclick="editEmployee(\'' + employee.id + '\')">Edit</button>' +
-                            '<button class="btn btn-sm btn-danger" onclick="deleteEmployee(\'' + employee.id + '\')">Delete</button>' +
-                            '</td>' +
-                            '</tr>';
+                                '<td>' + employee.id + '</td>' +
+                                '<td>' + employee.firstname + '</td>' +
+                                '<td>' + employee.lastname + '</td>' +
+                                '<td>' + employee.jobTitle + '</td>' +
+                                '<td class="table-buttons">' +
+                                '<button class="btn btn-sm btn-primary mr-1" onclick="editEmployee(\'' + employee.id + '\')">Edit</button>' +
+                                '<button class="btn btn-sm btn-danger" onclick="deleteEmployee(\'' + employee.id + '\')">Delete</button>' +
+                                '</td>' +
+                                '</tr>';
                         tableBody.append(row);
                     });
                 }
@@ -48,41 +55,9 @@
         }
 
         loadEmployees();
-     });
-//    $(document).ready(function () {
-//                   alert('read function avbravo');
-//        function loadEmployees() {
-//            alert("adios");
-//            $.ajax({
-//                url: 'resources/api/employee',
-//                method: 'GET',
-//                contentType: 'application/json',
-//                success: function (data) {
-//                    var tableBody = $('#employeesTable tbody');
-//                    tableBody.empty();
-//                    data.forEach(function (employee) {
-//                        var row = '<tr>' +
-//                            '<td>' + employee.employeeID + '</td>' +
-//                            '<td>' + employee.name + '</td>' +
-//                            '<td>' + employee.position + '</td>' +
-//                            '<td>' + employee.hireDate + '</td>' +
-//                            '<td>' + (employee?.department?.name || '') + '</td>' +
-//                            '<td class="table-buttons">' +
-//                            '<button class="btn btn-sm btn-primary mr-1" onclick="editEmployee(\'' + employee.employeeID + '\')">Edit</button>' +
-//                            '<button class="btn btn-sm btn-danger" onclick="deleteEmployee(\'' + employee.employeeID + '\')">Delete</button>' +
-//                            '</td>' +
-//                            '</tr>';
-//                        tableBody.append(row);
-//                    });
-//                }
-//            });
-//        }
-//
-//        loadEmployees();
-//       
-//
-//           
-//
-//      
-//    });
+
+
+
+    });
+
 </script>
