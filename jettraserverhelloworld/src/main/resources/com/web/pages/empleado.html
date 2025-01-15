@@ -1,9 +1,7 @@
 <div class="container mt-5">
     <h1 class="mb-4">Empleado</h1>
     <p>Representa los empleados de la organizacion.</p>
-    <form>   
-        <button class="btn btn-success mb-4" id="newEmployeeButton">Add Employee</button>
-    </form>
+    <button class="btn btn-success mb-4" name="newEmployeeButton" id="newEmployeeButton">Add Employee</button>
     <!-- Employee Table -->
     <table id="employeesTable" class="table table-bordered">
         <thead>
@@ -20,12 +18,6 @@
     </table>
 </div>
 
-<div class="modal fade" id="employeeModal" tabindex="-1" role="dialog" aria-labelledby="employeeModalLabel" aria-hidden="true">
-    <form id="employeeForm">
-        Hola  modal
-    </form>
-
-</div>
 
 
 <script>
@@ -57,9 +49,11 @@
         }
 
         loadEmployees();
+        // Open modal for new employee
+       // Open modal for new employee
+       
 
-
-
+        
     });
 
 </script>
