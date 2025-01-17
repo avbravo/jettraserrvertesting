@@ -31,9 +31,9 @@ import java.util.Optional;
 
 @Path("/employees")
 @ApplicationScoped
-public class EmployeeController implements Serializable, JettraConfig{
+public class EmployeeController implements Serializable, JettraConfig {
 
-     @Inject
+    @Inject
     EmployeeService employeeService;
 
     @GET
@@ -54,17 +54,37 @@ public class EmployeeController implements Serializable, JettraConfig{
 
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
-    @Path("{id}")
-    public Response update(@PathParam("id") int id, Employee employee) {
-        Optional<Employee> match = employeeService.getAllEmployees().stream().filter(c -> c.getId() == id).findFirst();
-        Employee updateEmployee = match.get();
-        updateEmployee.setFirstname(employee.getFirstname());
-        updateEmployee.setLastname(employee.getLastname());
-        updateEmployee.setJobTitle(employee.getJobTitle());
-        employeeService.update(updateEmployee);
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateEmployee(Employee employee) throws URISyntaxException {
+        try {
+            System.out.println("--> llego al controller " + employee.toString());
+            Optional<Employee> match = employeeService.getAllEmployees().stream().filter(c -> c.getId() == employee.getId()).findFirst();
+            Employee updateEmployee = match.get();
+            updateEmployee.setFirstname(employee.getFirstname());
+            updateEmployee.setLastname(employee.getLastname());
+            updateEmployee.setJobTitle(employee.getJobTitle());
+            employeeService.update(updateEmployee);
+        } catch (Exception e) {
+            System.out.println("error " + e.getLocalizedMessage());
+            Response.ok("error " + e.getLocalizedMessage());
+        }
+
         return Response.ok().build();
-    }   
-    
+
+    }
+//    @PUT
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    @Path("{id}")
+//    public Response update(@PathParam("id") int id, Employee employee) {
+//        Optional<Employee> match = employeeService.getAllEmployees().stream().filter(c -> c.getId() == id).findFirst();
+//        Employee updateEmployee = match.get();
+//        updateEmployee.setFirstname(employee.getFirstname());
+//        updateEmployee.setLastname(employee.getLastname());
+//        updateEmployee.setJobTitle(employee.getJobTitle());
+//        employeeService.update(updateEmployee);
+//        return Response.ok().build();
+//    }   
+
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -84,7 +104,7 @@ public class EmployeeController implements Serializable, JettraConfig{
     public Response delete(@PathParam("id") int id) {
         Optional<Employee> match = employeeService.getAllEmployees().stream().filter(c -> c.getId() == id).findFirst();
         Employee newEmployee = match.get();
-        employeeService.delete(newEmployee);       
+        employeeService.delete(newEmployee);
         return Response.ok().build();
     }
 }

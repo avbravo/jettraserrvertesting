@@ -125,6 +125,33 @@
             });
         });
 
+        $('#updateButton').on('click', function () {
+    
+           console.log('click oin update');
+             var employee = {
+                firstname: $('#firstname').val(),
+                lastname: $('#lastname').val(),
+                jobTitle: $('#jobTitle').val(),
+
+            };
+            console.log('click paso 2');
+             $.ajax({
+                url: '/api/employees',
+                method: 'PUT',
+                contentType: 'application/json',
+                data: JSON.stringify(employee),
+                success: function () {
+                    loadEmployees();
+                    $('#employeeModal').modal('hide');
+                    $('#employeeForm')[0].reset();
+                }
+            });
+            console.log("click paso 3");
+        });
+
+
+
+
         window.editEmployee = function (employeeID) {
             console.log("edit ");
             $.ajax({
@@ -147,6 +174,15 @@
 
         };
 
+        window.deleteEmployee = function (employeeID) {
+            $.ajax({
+                url: '/api/employees/' + employeeID,
+                method: 'DELETE',
+                success: function () {
+                    loadEmployees();
+                }
+            });
+        };
 
 
     });
