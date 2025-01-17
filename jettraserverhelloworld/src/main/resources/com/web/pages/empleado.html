@@ -30,30 +30,30 @@
             </div>
             <div class="modal-body">
                 <form id="employeeForm">
-                    
+
                     <div class="form-group">
-                            <label for="employeeID">Employee ID:</label>
-                            <input type="number" class="form-control" id="employeeID" name="employeeID">
-                        </div>
-                      <div class="form-group">
-                            <label for="firstname">firstname:</label>
-                            <input type="text" class="form-control" id="firstname" name="firstname">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="lastname">lastname:</label>
-                            <input type="text" class="form-control" id="lastname" name="lastname">
-                        </div>
-                        <div class="form-group">
-                            <label for="jobTitle">jobTitle:</label>
-                            <input type="text" class="form-control" id="jobTitle" name="jobTitle">
-                        </div>
-                               
+                        <label for="employeeID">Employee ID:</label>
+                        <input type="number" class="form-control" id="employeeID" name="employeeID">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">firstname:</label>
+                        <input type="text" class="form-control" id="firstname" name="firstname">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">lastname:</label>
+                        <input type="text" class="form-control" id="lastname" name="lastname">
+                    </div>
+                    <div class="form-group">
+                        <label for="jobTitle">jobTitle:</label>
+                        <input type="text" class="form-control" id="jobTitle" name="jobTitle">
+                    </div>
+
                     <button type="submit" class="btn btn-primary" id="saveButton">Save</button>
                     <button type="button" class="btn btn-primary" id="updateButton">Update</button>
                 </form>
-                
-                
+
+
             </div>
         </div>
     </div>
@@ -90,11 +90,49 @@
 
         loadEmployees();
 
-         $('#newEmployeeButton').on('click', function () {
-             console.log("llego al evento click");
-           $('#employeeModal').modal('show');
-           loadEmployees();
+        $('#newEmployeeButton').on('click', function () {
+            console.log("llego al evento click");
+            $('#employeeForm')[0].reset();
+            $('#employeeID').closest('.form-group').hide();
+            $('#employeeModalLabel').text('Add Employee');
+            $('#saveButton').show();
+            $('#updateButton').hide();
+
+            $('#employeeModal').modal('show');
+            loadEmployees();
         });
+
+        $('#employeeForm').on('submit', function (e) {
+            console.log("saveform.");
+            e.preventDefault();
+            
+
+
+             var employee = {
+                        firstname: $('#firstname').val(),
+                        lastname: $('#lastname').val(),
+                        jobTitle: $('#jobTitle').val(),
+                    
+            };
+            
+            console.log("paso el {}");
+            
+            
+             $.ajax({
+                url: 'http://localhost:8080/api/employees',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(employee),
+                success: function () {
+                    loadEmployees();
+                    $('#employeeModal').modal('hide');
+                    $('#employeeForm')[0].reset();
+                }
+            });
+            
+        });
+
+
     });
 
 </script>
