@@ -105,22 +105,13 @@
         });
 
         $('#employeeForm').on('submit', function (e) {
-            console.log("saveform.");
             e.preventDefault();
-            if($('#firstname').val() === ""){
-                alert("esta vacio");
-                       $('#employeeModal').modal('show');
-            }
             var employee = {
                 firstname: $('#firstname').val(),
                 lastname: $('#lastname').val(),
                 jobTitle: $('#jobTitle').val(),
 
             };
-
-
-
-
             $.ajax({
                 url: '/api/employees',
                 method: 'POST',
@@ -132,10 +123,10 @@
                     $('#employeeForm')[0].reset();
                 }
             });
-
         });
-
-
+        
+        
+      
     });
 
 </script>
