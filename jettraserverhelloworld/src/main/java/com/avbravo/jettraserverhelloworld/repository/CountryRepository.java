@@ -34,7 +34,7 @@ public interface CountryRepository extends CrudRepository<Country, String> {
     @Count()
     public Long count(Search... search);
     
-     @CountLikeBy(caseSensitive = CaseSensitive.NO, likeByType = LikeByType.ANYWHERE)
+    @CountLikeBy(caseSensitive = CaseSensitive.NO, likeByType = LikeByType.ANYWHERE)
     public Long countLikeByCountry(String country);
 
     @LikeBy(caseSensitive = CaseSensitive.NO, typeOrder = TypeOrder.ASC, likeByType = LikeByType.ANYWHERE)
