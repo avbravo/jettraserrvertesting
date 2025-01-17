@@ -124,13 +124,31 @@
                 }
             });
         });
-        
-      window.editEmployee = function(employeeID){
-         console.log("edit ");
-      };
-      
-      
-      
+
+        window.editEmployee = function (employeeID) {
+            console.log("edit ");
+            $.ajax({
+                url: '/api/employees/' + employeeID,
+                method: 'GET',
+                contentType: 'application/json',
+                success: function (employee) {
+                    $('#employeeID').val(employee.id).prop('disabled', true).closest('.form-group').show();
+                    $('#firstname').val(employee.firstname);
+                    $('#lastname').val(employee.lastname);
+                    $('#jobTitle').val(employee.jobTitle);
+                    $('#employeeModalLabel').text('Edit Employee');
+                    $('#saveButton').hide();
+                    $('#updateButton').show();
+                    $('#employeeModal').modal('show');
+                }
+
+
+            });
+
+        };
+
+
+
     });
 
 </script>
