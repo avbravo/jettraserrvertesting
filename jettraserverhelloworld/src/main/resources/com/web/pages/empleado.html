@@ -33,20 +33,24 @@
 
                     <div class="form-group">
                         <label for="employeeID">Employee ID:</label>
-                        <input type="number" class="form-control" id="employeeID" name="employeeID">
+                        <input type="number" class="form-control" id="employeeID" name="employeeID"/>
                     </div>
                     <div class="form-group">
                         <label for="firstname">firstname:</label>
-                        <input type="text" class="form-control" id="firstname" name="firstname">
+                        <input type="text" class="form-control" id="firstname" name="firstname"  required 
+                               title="Firstname" placeholder="Enter First Name"/>
                     </div>
 
                     <div class="form-group">
                         <label for="lastname">lastname:</label>
-                        <input type="text" class="form-control" id="lastname" name="lastname">
+                        <input type="text" class="form-control" id="lastname" name="lastname" required
+                               title="Last name" placeholder="Enter Last Name" />
                     </div>
                     <div class="form-group">
                         <label for="jobTitle">jobTitle:</label>
-                        <input type="text" class="form-control" id="jobTitle" name="jobTitle">
+                        <input type="text" class="form-control" id="jobTitle" name="jobTitle" required
+                               title="jobTitle" placeholder="Enter jobTitle"
+                               />
                     </div>
 
                     <button type="submit" class="btn btn-primary" id="saveButton">Save</button>
@@ -64,7 +68,7 @@
     $(document).ready(function () {
         function loadEmployees() {
             $.ajax({
-                url: 'http://localhost:8080/api/employees',
+                url: '/api/employees',
                 method: 'GET',
                 contentType: 'application/json',
                 success: function (data) {
@@ -91,13 +95,11 @@
         loadEmployees();
 
         $('#newEmployeeButton').on('click', function () {
-            console.log("llego al evento click");
             $('#employeeForm')[0].reset();
             $('#employeeID').closest('.form-group').hide();
             $('#employeeModalLabel').text('Add Employee');
             $('#saveButton').show();
             $('#updateButton').hide();
-
             $('#employeeModal').modal('show');
             loadEmployees();
         });
@@ -105,9 +107,10 @@
         $('#employeeForm').on('submit', function (e) {
             console.log("saveform.");
             e.preventDefault();
-
-
-
+            if($('#firstname').val() === ""){
+                alert("esta vacio");
+                       $('#employeeModal').modal('show');
+            }
             var employee = {
                 firstname: $('#firstname').val(),
                 lastname: $('#lastname').val(),
@@ -115,11 +118,11 @@
 
             };
 
-            console.log("paso el {}");
+
 
 
             $.ajax({
-                url: 'http://localhost:8080/api/employees',
+                url: '/api/employees',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify(employee),
