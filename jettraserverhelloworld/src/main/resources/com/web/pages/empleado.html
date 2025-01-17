@@ -18,6 +18,46 @@
     </table>
 </div>
 
+<!-- Employee Modal -->
+<div class="modal fade" id="employeeModal" tabindex="-1" role="dialog" aria-labelledby="employeeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="employeeModalLabel">Add Employee</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="employeeForm">
+                    
+                    <div class="form-group">
+                            <label for="employeeID">Employee ID:</label>
+                            <input type="number" class="form-control" id="employeeID" name="employeeID">
+                        </div>
+                      <div class="form-group">
+                            <label for="firstname">firstname:</label>
+                            <input type="text" class="form-control" id="firstname" name="firstname">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastname">lastname:</label>
+                            <input type="text" class="form-control" id="lastname" name="lastname">
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle">jobTitle:</label>
+                            <input type="text" class="form-control" id="jobTitle" name="jobTitle">
+                        </div>
+                               
+                    <button type="submit" class="btn btn-primary" id="saveButton">Save</button>
+                    <button type="button" class="btn btn-primary" id="updateButton">Update</button>
+                </form>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <script>
@@ -50,7 +90,11 @@
 
         loadEmployees();
 
-        
+         $('#newEmployeeButton').on('click', function () {
+             console.log("llego al evento click");
+           $('#employeeModal').modal('show');
+           loadEmployees();
+        });
     });
 
 </script>
