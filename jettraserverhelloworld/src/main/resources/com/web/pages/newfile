@@ -1,21 +1,29 @@
-
-  // Update existing employee
-        $('#updateButton').on('click', function () {
-            var employee = {
-                    id: $('#employeeID').val(),
-                    firstname: $('#firstname').val(),
-                    lastname: $('#lastname').val(),
-                    jobTitle: $('#jobTitle').val(),                    
-            };
+  // Edit employee (populate form)
+        window.editEmployee = function (employeeID) {
             $.ajax({
-                url: '/api/employees',
-                method: 'PUT',
+                url: '/api/employees/' + employeeID,
+                method: 'GET',
                 contentType: 'application/json',
-                data: JSON.stringify(employee),
-                success: function () {
-                    loadEmployees();
-                    $('#employeeModal').modal('hide');
-                    $('#employeeForm')[0].reset();
+                success: function (employee) {
+                    $('#employeeID').val(employee.id).prop('disabled', true).closest('.form-group').show();
+                    $('#firstname').val(employee.firstname);
+                    $('#lastname').val(employee.lastname);
+                    $('#jobTitle').val(employee.jobTitle);
+                    $('#employeeModalLabel').text('Edit Employee');
+                    $('#saveButton').hide();
+                    $('#updateButton').show();
+                    $('#employeeModal').modal('show');
                 }
             });
-        });
+        };
+
+        // Delete employee
+        window.deleteEmployee = function (employeeID) {
+            $.ajax({
+                url: '/api/employees/' + employeeID,
+                method: 'DELETE',
+                success: function () {
+                    loadEmployees();
+                }
+            });
+        };
