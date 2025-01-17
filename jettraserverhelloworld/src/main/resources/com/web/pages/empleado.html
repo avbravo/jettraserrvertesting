@@ -105,20 +105,20 @@
         $('#employeeForm').on('submit', function (e) {
             console.log("saveform.");
             e.preventDefault();
-            
 
 
-             var employee = {
-                        firstname: $('#firstname').val(),
-                        lastname: $('#lastname').val(),
-                        jobTitle: $('#jobTitle').val(),
-                    
+
+            var employee = {
+                firstname: $('#firstname').val(),
+                lastname: $('#lastname').val(),
+                jobTitle: $('#jobTitle').val(),
+
             };
-            
+
             console.log("paso el {}");
-            
-            
-             $.ajax({
+
+
+            $.ajax({
                 url: 'http://localhost:8080/api/employees',
                 method: 'POST',
                 contentType: 'application/json',
@@ -129,7 +129,7 @@
                     $('#employeeForm')[0].reset();
                 }
             });
-            
+
         });
 
 
