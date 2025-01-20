@@ -8,6 +8,10 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link href="https://getbootstrap.com/docs/4.0/examples/dashboard/dashboard.css" rel="stylesheet">
+        
+        <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
         <!--<link rel="stylesheet" href="css/pico.min.css">-->
 
         <!-- Bootstrap Icons CSS -->
@@ -59,6 +63,18 @@
                                 <a class="nav-link" href="#" id="tailwindLink">
                                     <i class="bi bi-bandaid"></i>
                                     Tailwind
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="graficaLink">
+                                   <i class="bi bi-file-bar-graph"></i>
+                                    Grafica
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="chartjsLink">
+                                   <i class="bi bi-file-bar-graph"></i>
+                                    ChartJS
                                 </a>
                             </li>
 
@@ -115,6 +131,12 @@
                 });
                 $('#tailwindLink').on('click', function () {
                     loadContent('http://localhost:8080/api/view/tailwind');
+                });
+                $('#graficaLink').on('click', function () {
+                    loadContent('http://localhost:8080/api/view/grafica');
+                });
+                $('#chartjsLink').on('click', function () {
+                    loadContent('http://localhost:8080/api/view/chartjs');
                 });
 
                 $('#j2htmlLink').on('click', function () {

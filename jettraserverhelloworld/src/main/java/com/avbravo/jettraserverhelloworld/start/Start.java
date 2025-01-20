@@ -7,7 +7,9 @@ import com.avbravo.jettraserverhelloworld.configuration.JakartaRestConfiguration
 import com.avbravo.jettraserverhelloworld.controller.CountryController;
 import com.avbravo.jettraserverhelloworld.controller.EmployeeController;
 import com.avbravo.jettraserverhelloworld.controller.HelloController;
+import com.avbravo.jettraserverhelloworld.view.ChartJSView;
 import com.avbravo.jettraserverhelloworld.view.EmpleadoView;
+import com.avbravo.jettraserverhelloworld.view.GraficaView;
 import com.avbravo.jettraserverhelloworld.view.template.AboutView;
 import com.avbravo.jettraserverhelloworld.view.HomeView;
 import com.avbravo.jettraserverhelloworld.view.J2htmlView;
@@ -52,6 +54,8 @@ public class Start {
                         classes.add(CountryController.class);
                         classes.add(JettraHealthController.class);
 
+                        classes.add(ChartJSView.class);
+                        classes.add(GraficaView.class);
                         classes.add(TailwindView.class);
                         classes.add(TemplateView.class);
                         classes.add(HomeView.class);
