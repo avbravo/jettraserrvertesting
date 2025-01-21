@@ -14,6 +14,7 @@ import com.avbravo.jettraserverhelloworld.view.template.AboutView;
 import com.avbravo.jettraserverhelloworld.view.HomeView;
 import com.avbravo.jettraserverhelloworld.view.J2htmlView;
 import com.avbravo.jettraserverhelloworld.view.JmoordbJ2htmlView;
+import com.avbravo.jettraserverhelloworld.view.MapaView;
 import com.avbravo.jettraserverhelloworld.view.TailwindView;
 import com.avbravo.jettraserverhelloworld.view.template.TemplateView;
 import com.jettraserver.JettraServer;
@@ -58,9 +59,9 @@ public class Start {
                         classes.add(GraficaView.class);
                         classes.add(TailwindView.class);
                         classes.add(TemplateView.class);
+                        classes.add(MapaView.class);
                         classes.add(HomeView.class);
                         classes.add(AboutView.class);
-
                         classes.add(EmpleadoView.class);
                         classes.add(J2htmlView.class);
                         classes.add(JmoordbJ2htmlView.class);
