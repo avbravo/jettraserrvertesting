@@ -404,3 +404,10 @@ String mongodbDatabase =getMicroprofileConfig("mongodb.database");
 # Componentes CSS
 
 * [Picocss](https://picocss.com/docs/forms/select)
+
+
+---
+# Templates
+
+[Tailwind Toolbox - Admin Dashboard Template](https://github.com/tailwindtoolbox/Admin-Template)
+
