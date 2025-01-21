@@ -7,14 +7,19 @@ import com.avbravo.jettraserverhelloworld.configuration.JakartaRestConfiguration
 import com.avbravo.jettraserverhelloworld.controller.CountryController;
 import com.avbravo.jettraserverhelloworld.controller.EmployeeController;
 import com.avbravo.jettraserverhelloworld.controller.HelloController;
+import com.avbravo.jettraserverhelloworld.view.BlankView;
+import com.avbravo.jettraserverhelloworld.view.CalendarView;
 import com.avbravo.jettraserverhelloworld.view.ChartJSView;
 import com.avbravo.jettraserverhelloworld.view.EmpleadoView;
+import com.avbravo.jettraserverhelloworld.view.FormsView;
 import com.avbravo.jettraserverhelloworld.view.GraficaView;
 import com.avbravo.jettraserverhelloworld.view.template.AboutView;
 import com.avbravo.jettraserverhelloworld.view.HomeView;
 import com.avbravo.jettraserverhelloworld.view.J2htmlView;
 import com.avbravo.jettraserverhelloworld.view.JmoordbJ2htmlView;
 import com.avbravo.jettraserverhelloworld.view.MapaView;
+import com.avbravo.jettraserverhelloworld.view.TableView;
+import com.avbravo.jettraserverhelloworld.view.TabsView;
 import com.avbravo.jettraserverhelloworld.view.TailwindView;
 import com.avbravo.jettraserverhelloworld.view.template.TemplateView;
 import com.jettraserver.JettraServer;
@@ -65,6 +70,11 @@ public class Start {
                         classes.add(EmpleadoView.class);
                         classes.add(J2htmlView.class);
                         classes.add(JmoordbJ2htmlView.class);
+                        classes.add(TableView.class);
+                        classes.add(TabsView.class);
+                        classes.add(CalendarView.class);
+                        classes.add(FormsView.class);
+                        classes.add(BlankView.class);
                         return classes;
                     }
                 }

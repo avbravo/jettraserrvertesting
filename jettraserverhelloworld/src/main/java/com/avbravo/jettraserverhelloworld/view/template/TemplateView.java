@@ -32,8 +32,9 @@ public class TemplateView implements JettraView{
     EmployeeService employeeService;
     @Override
     public Response draw() {
-        return generate("com/web/pages/template/admintemplate.html");
-//        return generate("com/web/pages/template/template.html");
+        return generate("com/web/pages/template/tailwindadmintemplate/index.html");
+    //    return generate("com/web/pages/template/admintemplate/admintemplate.html");
+      //  return generate("com/web/pages/template/template.html");
         
     }
 

@@ -33,58 +33,11 @@
                 padding: 20px;
             }
         </style>
-        <!--Dark theme-->
-        <style>
-
-            body {
-
-                background-color: #212529; /* Dark background color */
-
-                color: #f8f9fa; /* Light text color */
-
-            }
-
-
-
-            .navbar {
-
-                background-color: #343a40; /* Slightly darker navbar background */
-
-            }
-
-
-
-            .card {
-
-                background-color: #282c34; /* Dark card background */
-
-                border-color: #383c43; /* Darker border color */
-
-            }
-
-
-
-            .card-text {
-
-                color: #ced4da; /* Slightly lighter text for readability */
-
-            }
-        </style>
     </head>
     <body>       
         <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
             <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Employee Management System</a>
             <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Tema
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
                     <a class="nav-link" href="#">Sign out</a>
@@ -197,7 +150,7 @@
                 $('#chartjsLink').on('click', function () {
                     loadContent('http://localhost:8080/api/view/chartjs');
                 });
-                $('#mapaLink').on('click', function () {
+  $('#mapaLink').on('click', function () {
                     loadContent('http://localhost:8080/api/view/mapa');
                 });
 
