@@ -66,10 +66,10 @@
 
         <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
             <div class="p-6">
-                <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
-                <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
+                <a href="#" id="dashboardMainLink" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+<!--                <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
                     <i class="fas fa-plus mr-3"></i> New Report
-                </button>
+                </button>-->
             </div>
             <nav class="text-white text-base font-semibold pt-3">
              
@@ -112,6 +112,30 @@
                 <a href="#" id="blankLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                     <i class="fas fa-sticky-note mr-3"></i>
                     Blank Page
+                </a>
+                <a href="#" id="tailwindLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                    <i class="fas fa-sticky-note mr-3"></i>
+                     Tailwind
+                </a>
+                <a href="#" id="chartjsLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                    <i class="fas fa-sticky-note mr-3"></i>
+                     ChartJS
+                </a>
+                <a href="#" id="mapaLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                    <i class="fas fa-sticky-note mr-3"></i>
+                    Mapa  
+                </a>
+                <a href="#" id="j2htmlLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                    <i class="fas fa-sticky-note mr-3"></i>
+                    j2html
+                </a>
+                <a href="#" id="jmoordbJ2hmtlLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                    <i class="fas fa-sticky-note mr-3"></i>
+                   JmoordbJ2hmtl
+                </a>
+                <a href="#" id="aboutUsLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                    <i class="fas fa-sticky-note mr-3"></i>
+                     About US
                 </a>
 
             </nav>
@@ -193,6 +217,35 @@
                         <i class="fas fa-sticky-note mr-3"></i>
                         Blank Page
                     </a>
+                      <a href="#" id="tailwindLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                        <i class="fas fa-sticky-note mr-3"></i>
+                      Tailwind
+                    </a>
+                      <a href="#" id="chartjsLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                        <i class="fas fa-sticky-note mr-3"></i>
+                   ChartJS
+                    </a>
+                      <a href="#" id="mapaLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                        <i class="fas fa-sticky-note mr-3"></i>
+                  Mapa
+                    </a>
+                    
+                      <a href="#" id="j2htmlLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                        <i class="fas fa-sticky-note mr-3"></i>
+                  j2html
+                    </a>
+                    
+                      <a href="#" id="jmoordbJ2hmtlLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                        <i class="fas fa-sticky-note mr-3"></i>
+                JmoordbJ2hmtl
+                    </a>
+                      <a href="#" id="aboutUsLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                        <i class="fas fa-sticky-note mr-3"></i>
+                About US
+                    </a>
+                    
+                    
+                    
                     <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
                         <i class="fas fa-cogs mr-3"></i>
                         Support
@@ -406,92 +459,111 @@
                 }
 
                 $('#empleadoLink').on('click', function () {
-                    console.log("llamdo a empleado");
-                    loadContent('http://localhost:8080/api/view/empleado');
+                    loadContent('/api/view/empleado');
                 });
+                
                 $('#tailwindLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/tailwind');
+                    loadContent('/api/view/tailwind');
                 });
                 $('#graficaLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/grafica');
+                    loadContent('/api/view/grafica');
                 });
                 $('#chartjsLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/chartjs');
+                    loadContent('/api/view/chartjs');
                 });
                 $('#mapaLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/mapa');
+                    loadContent('/api/view/mapa');
                 });
 
                 $('#j2htmlLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/j2html');
+                    loadContent('/api/view/j2html');
                 });
 
                 $('#jmoordbJ2hmtlLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/jmoordbj2html');
+                    loadContent('/api/view/jmoordbj2html');
                 });
 
                 $('#managerLink').on('click', function () {
                     loadContent('manager.html');
                 });
                 $('#homeLink').on('click', function () {
-                    alert("home...");
-                    loadContent('http://localhost:8080/api/view/home');
+                    loadContent('/api/view/home');
                 });
                 $('#aboutUsLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/about');
+                    loadContent('/api/view/about');
                 });
                 $('#tableLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/table');
+                    loadContent('/api/view/table');
                 });
                 $('#tabsLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/tabs');
+                    loadContent('/api/view/tabs');
                 });
                 $('#calendarLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/calendar');
+                    loadContent('/api/view/calendar');
                 });
                 $('#formsLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/forms');
+                    loadContent('/api/view/forms');
                 });
                 $('#blankLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/blank');
+                    loadContent('/api/view/blank');
                 });
                 $('#dashboardLink').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/dashboard');
+                    loadContent('/api/view/dashboard');
+                });
+                $('#dashboardMainLink').on('click', function () {
+                    loadContent('/api/view/dashboard');
                 });
 
 
+ $('#aboutUsLinkMovil').on('click', function () {
+                    loadContent('/api/view/about');
+                });
 
+  $('#j2htmlLinkMovil').on('click', function () {
+                    loadContent('/api/view/j2html');
+                });
 
+                $('#jmoordbJ2hmtlLinkMovil').on('click', function () {
+                    loadContent('/api/view/jmoordbj2html');
+                });
 
-
+ $('#chartjsLinkMovil').on('click', function () {
+                    loadContent('/api/view/chartjs');
+                });
 
                 $('#empleadoLinkMovil').on('click', function () {
-                    console.log("llamdo a empleado");
-                    loadContent('http://localhost:8080/api/view/empleado');
+                    loadContent('/api/view/empleado');
                 });
-
+  $('#mapaLinkMovil').on('click', function () {
+                    loadContent('/api/view/mapa');
+                });
                 $('#graficaLinkMovil').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/grafica');
+                    loadContent('/api/view/grafica');
                 });
                 $('#tableLinkMovil').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/table');
+                    loadContent('/api/view/table');
                 });
                 $('#tabsLinkMovil').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/tabs');
+                    loadContent('/api/view/tabs');
                 });
                 $('#calendarLinkMovil').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/calendar');
+                    loadContent('/api/view/calendar');
                 });
                 $('#formsLinkMovil').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/forms');
+                    loadContent('/api/view/forms');
                 });
                 $('#blankLinkMovil').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/blank');
+                    loadContent('/api/view/blank');
                 });
                 $('#dashboardLinkMovil').on('click', function () {
-                    loadContent('http://localhost:8080/api/view/dashboard');
+                    loadContent('/api/view/dashboard');
                 });
-                loadContent('http://localhost:8080/api/view/home');
+                 $('#tailwindLinkMovil').on('click', function () {
+                    loadContent('/api/view/tailwind');
+                });
+                
+                
+                loadContent('/api/view/home');
 
             });
 
