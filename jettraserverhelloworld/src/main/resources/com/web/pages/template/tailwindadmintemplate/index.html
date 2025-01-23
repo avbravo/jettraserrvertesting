@@ -68,10 +68,7 @@
 
         <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
             <div class="p-6">
-                <a href="#" id="dashboardMainLink" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
-                <!--                <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                                    <i class="fas fa-plus mr-3"></i> New Report
-                                </button>-->
+                <a href="#" id="dashboardMainLink" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Jettra</a>
             </div>
 
 
@@ -97,16 +94,7 @@
                                     title="Componentes"
                                     />-->
 
-                <!--                <button 
-                                    data-popover-target="menu"
-                
-                
-                                    class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
-                                    type="button">
-                
-                                    <i class="fas fa-tachometer-alt mr-3"></i>            
-                                    Componentes Desktop
-                                </button>-->
+              
                 <ul
                     role="menu"
                     data-popover="menu"
@@ -228,7 +216,16 @@
                 <div class="w-1/2"></div>
                 <div x-data="{ isOpen: false }" class="relative w-1/2 flex justify-end">
                     <button @click="isOpen = !isOpen" class="realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
-                        <img src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400">
+                        <!--<img src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400">-->
+                        
+                                            <img
+                                    alt="tania andrew"
+                                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                                    class="relative inline-block h-10 w-10 cursor-pointer rounded-full object-cover object-center"
+                                
+                                    title="Componentes"
+                                    />
+                        
                     </button>
                     <button x-show="isOpen" @click="isOpen = false" class="h-full w-full fixed inset-0 cursor-default"></button>
                     <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
@@ -242,7 +239,8 @@
             <!-- Mobile Header & Nav -->
             <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
                 <div class="flex items-center justify-between">
-                    <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+                    <!--<a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>-->
+                      <a href="#" id="dashboardMainLinkMovil" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Jettra</a>
                     <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
                         <i x-show="!isOpen" class="fas fa-bars"></i>
                         <i x-show="isOpen" class="fas fa-times"></i>
@@ -643,6 +641,10 @@
                 });
 
 
+
+ $('#dashboardMainLinkMovil').on('click', function () {
+                    loadContent('/api/view/dashboard');
+                });
                 $('#homeLinkMovil').on('click', function () {
                     loadContent('/api/view/home');
                 });
