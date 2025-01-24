@@ -43,9 +43,9 @@ public class Start {
               /**
          * Con RootPath
          */
-  //String host="localhost";
+  String host="localhost";
 //  String host="192.168.60.243";
-         String host="192.168.50.116";
+       //  String host="192.168.50.116";
         JettraServer local = new JettraServer.Builder()
                 .protocol(Protocol.HTTP)
                 .host(host)
