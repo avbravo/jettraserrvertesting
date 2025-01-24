@@ -3,6 +3,8 @@
  */
 package com.avbravo.jettraserverhelloworld.start;
 
+import com.avbravo.jettraserverhelloworld.annotationprocessor.Car;
+import com.avbravo.jettraserverhelloworld.annotationprocessor.CarBuilder;
 import com.avbravo.jettraserverhelloworld.configuration.JakartaRestConfiguration;
 import com.avbravo.jettraserverhelloworld.controller.CountryController;
 import com.avbravo.jettraserverhelloworld.controller.EmployeeController;
@@ -39,13 +41,21 @@ import java.util.concurrent.ExecutionException;
 public class Start {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException, IOException {
+      
         
+//         Car car = new CarBuilder()
+//                 .setMarca("Toyota")
+//                 .setModelo("Corolla")
+//                 .build();
+//
+//        System.out.println("--->Toyota[]= "+car.marca);
+////      assertEquals("toyota", car.marca);
               /**
          * Con RootPath
          */
   //String host="localhost";
-//  String host="192.168.60.243";
-         String host="192.168.50.116";
+  String host="192.168.60.243";
+   //      String host="192.168.50.116";
         JettraServer local = new JettraServer.Builder()
                 .protocol(Protocol.HTTP)
                 .host(host)
