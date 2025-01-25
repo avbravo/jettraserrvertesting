@@ -68,10 +68,7 @@
 
         <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
             <div class="p-6">
-                <a href="#" id="dashboardMainLink" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
-                <!--                <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                                    <i class="fas fa-plus mr-3"></i> New Report
-                                </button>-->
+                <a href="#" id="dashboardMainLink" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Jettra</a>
             </div>
 
 
@@ -79,67 +76,113 @@
 
             <nav class="text-white text-base font-semibold pt-3">
 
-                <a href="#" id="dashboardLink" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+                <a href="#" id="dashboardLink" class="flex items-center active-nav-link text-white py-2 pl-6 nav-item">
                     <i class="fas fa-tachometer-alt mr-3"></i>
                     Dashboard
                 </a>
 
-                <!-- <button 
+                <a href="#" data-popover-target="menu"  class="flex items-center active-nav-link text-white py-2 pl-6 nav-item">
+                    <i class="fas fa-tv-retro mr-3"></i>
+                    Componentes
+                </a>
+
+                <!--                   <img
+                                    alt="tania andrew"
+                                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                                    class="relative inline-block h-10 w-10 cursor-pointer rounded-full object-cover object-center"
                                     data-popover-target="menu"
-                                    class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
-                     <i class="fas fa-tachometer-alt mr-3"></i>            
-                     Softmenu
-                                 
-                                </button>-->
-                <button 
-                    data-popover-target="menu"
+                                    title="Componentes"
+                                    />-->
 
 
-                    class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
-                    type="button">
-
-                    <i class="fas fa-tachometer-alt mr-3"></i>            
-                    Softmenu
-
-                </button>
                 <ul
                     role="menu"
                     data-popover="menu"
                     data-popover-placement="bottom"
-                    class="absolute z-10 min-w-[180px] overflow-auto rounded-lg border border-slate-200 bg-white p-1.5 shadow-lg shadow-sm focus:outline-none"
+                    class="absolute z-10 min-w-[180px] overflow-auto rounded-lg border border-slate-200 bg-black p-1.5 shadow-lg shadow-sm focus:outline-none"
                     >
+
                     <li>
-                        <a href="#" id="homeLink" class="flex items-center text-blue opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                        <a href="#" id="empleadoLink"
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
                             <i class="fas fa-calendar mr-3"></i>
-                            Home
+                            Empleado
                         </a>
                     </li>
                     <li>
+                        <a href="#" id="graficaLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                            <i class="fas fa-calendar mr-3"></i>
+                            Grafica
+                        </a>  </li>
+                    <li>
                         <a href="#" id="j2htmlLink" 
-                           class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
-                           class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                           >
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
                             <i class="fas fa-sticky-note mr-3"></i>
                             j2html
                         </a>
                     </li>
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        {`Menu Item 1`}
+                    <li>
+                        <a href="#" id="loginLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                            <i class="fas fa-sticky-note mr-3"></i>
+                            login
+                        </a>
                     </li>
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        {`Menu Item 2`}
+                    <li>
+                        <a href="#" id="registrarseLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                            <i class="fas fa-sticky-note mr-3"></i>
+                            registrarse
+                        </a>
                     </li>
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        {`Menu Item 3`}
+                    <li>
+                        <a href="#" id="darkmodeLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                            <i class="fas fa-sticky-note mr-3"></i>
+                           Darkmode
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#" id="jmoordbJ2hmtlLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                            <i class="fas fa-sticky-note mr-3"></i>
+                            JmoordbJ2hmtl
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="aboutUsLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                            <i class="fas fa-sticky-note mr-3"></i>
+                            About US
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="tailwindLink"
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                            <i class="fas fa-sticky-note mr-3"></i>
+                            Tailwind
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="chartjsLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                            <i class="fas fa-sticky-note mr-3"></i>
+                            ChartJS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="mapaLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                            <i class="fas fa-sticky-note mr-3"></i>
+                            Mapa
+                        </a>
                     </li>
                 </ul>
 
@@ -148,11 +191,7 @@
                     <i class="fas fa-calendar mr-3"></i>
                     Home
                 </a>
-                <a href="#" id="graficaLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                    <i class="fas fa-calendar mr-3"></i>
-                    Grafica
-                </a>
-
+                <hr class="my-1 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
                 <a href="#" id="formsLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                     <i class="fas fa-align-left mr-3"></i>
                     Forms
@@ -162,274 +201,31 @@
                     Blank Page
                 </a>
 
-
-
-
-                <a href="#" id="aboutUsLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                    <i class="fas fa-sticky-note mr-3"></i>
-                    About US
+                <a href="#" id="tableLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                    <i class="fas fa-table mr-3"></i>
+                    Table
                 </a>
-                <hr class="my-2 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
-                <button data-popover-target="notifications-menu" 
-                        class="rounded-md border border-transparent p-2.5 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" 
-                        type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 pointer-events-none">
-                    <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />                    
-                    </svg> 
 
-                </button>
-                <ul
-                    role="menu"
-                    data-popover="notifications-menu"
-                    data-popover-placement="bottom"
-                    class="absolute z-10 min-w-[180px] overflow-auto rounded-lg border border-slate-200  p-1.5 shadow-lg shadow-sm focus:outline-none"
-                    >
-                    <li>
-                        <a href="#" id="j2htmlLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                            <i class="fas fa-sticky-note mr-3"></i>
-                            j2html
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" id="jmoordbJ2hmtlLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                            <i class="fas fa-sticky-note mr-3"></i>
-                            JmoordbJ2hmtl
-                        </a>
-                    </li>
+                <a href="#" id="tabsLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                    <i class="fas fa-tablet-alt mr-3"></i>
+                    Tabbed Content
+                </a>
 
-                    <li>
-                        <a href="#" id="empleadoLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                            <i class="fas fa-calendar mr-3"></i>
-                            Empleado
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" id="chartjsLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                            <i class="fas fa-sticky-note mr-3"></i>
-                            ChartJS
-                        </a>
-                    </li>
-                    <hr class="my-2 border-slate-200" role="menuitem" />
-                    <li>
-                        <a href="#" id="mapaLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                            <i class="fas fa-sticky-note mr-3"></i>
-                            Mapa  
-                        </a>
-
-                    </li>
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-slate-400">
-                        <path fill-rule="evenodd" d="M7.84 1.804A1 1 0 0 1 8.82 1h2.36a1 1 0 0 1 .98.804l.331 1.652a6.993 6.993 0 0 1 1.929 1.115l1.598-.54a1 1 0 0 1 1.186.447l1.18 2.044a1 1 0 0 1-.205 1.251l-1.267 1.113a7.047 7.047 0 0 1 0 2.228l1.267 1.113a1 1 0 0 1 .206 1.25l-1.18 2.045a1 1 0 0 1-1.187.447l-1.598-.54a6.993 6.993 0 0 1-1.929 1.115l-.33 1.652a1 1 0 0 1-.98.804H8.82a1 1 0 0 1-.98-.804l-.331-1.652a6.993 6.993 0 0 1-1.929-1.115l-1.598.54a1 1 0 0 1-1.186-.447l-1.18-2.044a1 1 0 0 1 .205-1.251l1.267-1.114a7.05 7.05 0 0 1 0-2.227L1.821 7.773a1 1 0 0 1-.206-1.25l1.18-2.045a1 1 0 0 1 1.187-.447l1.598.54A6.992 6.992 0 0 1 7.51 3.456l.33-1.652ZM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
-                        </svg>
-
-                        <p class="text-slate-800 font-medium ml-2">
-                            Edit Profile
-                        </p>
-                    </li>
-
-                </ul>
-                <hr class="my-1 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
-                <img
-                    alt="tania andrew"
-                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
-                    class="relative inline-block h-10 w-10 cursor-pointer rounded-full object-cover object-center"
-                    data-popover-target="profile-menu"
-                    />
-                Menu
-                <ul
-                    role="menu"
-                    data-popover="profile-menu"
-                    data-popover-placement="bottom"
-                    class="absolute z-10 min-w-[180px] overflow-auto rounded-lg border border-slate-200 bg-white p-1.5 shadow-lg shadow-sm focus:outline-none"
-                    >
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-slate-400">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-5.5-2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 12a5.99 5.99 0 0 0-4.793 2.39A6.483 6.483 0 0 0 10 16.5a6.483 6.483 0 0 0 4.793-2.11A5.99 5.99 0 0 0 10 12Z" clip-rule="evenodd" />
-                        </svg>
-
-                        <p class="text-slate-800 font-medium ml-2">
-                            My Profile
-                        </p>
-                    </li>
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-slate-400">
-                        <path fill-rule="evenodd" d="M7.84 1.804A1 1 0 0 1 8.82 1h2.36a1 1 0 0 1 .98.804l.331 1.652a6.993 6.993 0 0 1 1.929 1.115l1.598-.54a1 1 0 0 1 1.186.447l1.18 2.044a1 1 0 0 1-.205 1.251l-1.267 1.113a7.047 7.047 0 0 1 0 2.228l1.267 1.113a1 1 0 0 1 .206 1.25l-1.18 2.045a1 1 0 0 1-1.187.447l-1.598-.54a6.993 6.993 0 0 1-1.929 1.115l-.33 1.652a1 1 0 0 1-.98.804H8.82a1 1 0 0 1-.98-.804l-.331-1.652a6.993 6.993 0 0 1-1.929-1.115l-1.598.54a1 1 0 0 1-1.186-.447l-1.18-2.044a1 1 0 0 1 .205-1.251l1.267-1.114a7.05 7.05 0 0 1 0-2.227L1.821 7.773a1 1 0 0 1-.206-1.25l1.18-2.045a1 1 0 0 1 1.187-.447l1.598.54A6.992 6.992 0 0 1 7.51 3.456l.33-1.652ZM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
-                        </svg>
-
-                        <p class="text-slate-800 font-medium ml-2">
-                            Edit Profile
-                        </p>
-                    </li>
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-slate-400">
-                        <path fill-rule="evenodd" d="M1 11.27c0-.246.033-.492.099-.73l1.523-5.521A2.75 2.75 0 0 1 5.273 3h9.454a2.75 2.75 0 0 1 2.651 2.019l1.523 5.52c.066.239.099.485.099.732V15a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3.73Zm3.068-5.852A1.25 1.25 0 0 1 5.273 4.5h9.454a1.25 1.25 0 0 1 1.205.918l1.523 5.52c.006.02.01.041.015.062H14a1 1 0 0 0-.86.49l-.606 1.02a1 1 0 0 1-.86.49H8.236a1 1 0 0 1-.894-.553l-.448-.894A1 1 0 0 0 6 11H2.53l.015-.062 1.523-5.52Z" clip-rule="evenodd" />
-                        </svg>
-
-                        <p class="text-slate-800 font-medium ml-2">
-                            Inbox
-                        </p>
-                    </li>
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-slate-400">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0ZM8.94 6.94a.75.75 0 1 1-1.061-1.061 3 3 0 1 1 2.871 5.026v.345a.75.75 0 0 1-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 1 0 8.94 6.94ZM10 15a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
-                        </svg>
-
-                        <p class="text-slate-800 font-medium ml-2">
-                            Help
-                        </p>
-                    </li>
-                    <hr class="my-2 border-slate-100" role="menuitem" />
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-slate-400">
-                        <path fill-rule="evenodd" d="M3 4.25A2.25 2.25 0 0 1 5.25 2h5.5A2.25 2.25 0 0 1 13 4.25v2a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 0-.75-.75h-5.5a.75.75 0 0 0-.75.75v11.5c0 .414.336.75.75.75h5.5a.75.75 0 0 0 .75-.75v-2a.75.75 0 0 1 1.5 0v2A2.25 2.25 0 0 1 10.75 18h-5.5A2.25 2.25 0 0 1 3 15.75V4.25Z" clip-rule="evenodd" />
-                        <path fill-rule="evenodd" d="M19 10a.75.75 0 0 0-.75-.75H8.704l1.048-.943a.75.75 0 1 0-1.004-1.114l-2.5 2.25a.75.75 0 0 0 0 1.114l2.5 2.25a.75.75 0 1 0 1.004-1.114l-1.048-.943h9.546A.75.75 0 0 0 19 10Z" clip-rule="evenodd" />
-                        </svg>
-
-                        <p class="text-slate-800 font-medium ml-2">
-                            Sign Out
-                        </p>
-                    </li>
-                </ul>
+                <a href="#" id="calendarLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+                    <i class="fas fa-calendar mr-3"></i>
+                    Calendar
+                </a>
 
 
 
-                <hr class="my-1 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
-                <button 
-                    data-popover-target="menu"
-                    class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
-                    Open Menu
 
-                </button>
-                <ul
-                    role="menu"
-                    data-popover="menu"
-                    data-popover-placement="bottom"
-                    class="absolute z-10 min-w-[180px] overflow-auto rounded-lg border border-slate-200 bg-white p-1.5 shadow-lg shadow-sm focus:outline-none"
-                    >
-                    <li>
-                        <a href="#" id="j2htmlLink" 
-                           class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item"
-                           class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                           >
-                            <i class="fas fa-sticky-note mr-3"></i>
-                            j2html
-                        </a>
-                    </li>
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        {`Menu Item 1`}
-                    </li>
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        {`Menu Item 2`}
-                    </li>
-                    <li
-                        role="menuitem"
-                        class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                        >
-                        {`Menu Item 3`}
-                    </li>
-                </ul>
-                <hr class="my-1 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
-                <ul class="space-y-2">
-                    <li>
-                        <button type="button" class="flex items-center w-full p-2 text-base font-normal transition duration-75 rounded-lg group " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                            <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Componentes</span>
-                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </button>
-                        <ul id="dropdown-example" class="hidden py-2 space-y-2">
-                            <li>
-                                <a href="#" id="j2htmlLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                                    <i class="fas fa-sticky-note mr-3"></i>
-                                    j2html
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" id="jmoordbJ2hmtlLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                                    <i class="fas fa-sticky-note mr-3"></i>
-                                    JmoordbJ2hmtl
-                                </a>
-                            </li>
 
-                            <li>
-                                <a href="#" id="empleadoLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                                    <i class="fas fa-calendar mr-3"></i>
-                                    Empleado
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" id="chartjsLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                                    <i class="fas fa-sticky-note mr-3"></i>
-                                    ChartJS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" id="mapaLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                                    <i class="fas fa-sticky-note mr-3"></i>
-                                    Mapa  
-                                </a>
 
-                            </li>
 
-                        </ul>
-                    </li>
 
-                </ul>
-                <ul class="space-y-2">
-                    <li>
-                        <button type="button" class="flex items-center w-full p-2 text-base font-normal transition duration-75 rounded-lg group " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                            <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>TailwindCss</span>
-                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </button>
-                        <ul id="dropdown-example" class="hidden py-2 space-y-2">
-                            <li>
-                                <a href="#" id="tailwindLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                                    <i class="fas fa-sticky-note mr-3"></i>
-                                    Tailwind
-                                </a>
-                            </li>
-                            <a href="#" id="tableLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                                <i class="fas fa-table mr-3"></i>
-                                Table
-                            </a>
 
-                            <a href="#" id="tabsLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                                <i class="fas fa-tablet-alt mr-3"></i>
-                                Tabbed Content
-                            </a>
 
-                            <a href="#" id="calendarLink" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-                                <i class="fas fa-calendar mr-3"></i>
-                                Calendar
-                            </a>
-                        </ul>
-                    </li>
 
-                </ul>
 
             </nav>
             <a href="#" class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">
@@ -444,7 +240,16 @@
                 <div class="w-1/2"></div>
                 <div x-data="{ isOpen: false }" class="relative w-1/2 flex justify-end">
                     <button @click="isOpen = !isOpen" class="realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
-                        <img src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400">
+                        <!--<img src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400">-->
+
+                        <img
+                            alt="tania andrew"
+                            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                            class="relative inline-block h-10 w-10 cursor-pointer rounded-full object-cover object-center"
+
+                            title="Componentes"
+                            />
+
                     </button>
                     <button x-show="isOpen" @click="isOpen = false" class="h-full w-full fixed inset-0 cursor-default"></button>
                     <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
@@ -452,13 +257,28 @@
                         <a href="#" class="block px-4 py-2 account-link hover:text-white">Support</a>
                         <a href="#" class="block px-4 py-2 account-link hover:text-white">Sign Out</a>
                     </div>
+                    
+                                    <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+                    
                 </div>
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+</script>
             </header>
 
             <!-- Mobile Header & Nav -->
             <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
                 <div class="flex items-center justify-between">
-                    <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+                    <!--<a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>-->
+                    <a href="#" id="dashboardMainLinkMovil" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Jettra</a>
                     <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
                         <i x-show="!isOpen" class="fas fa-bars"></i>
                         <i x-show="isOpen" class="fas fa-times"></i>
@@ -468,154 +288,114 @@
                 <!-- Dropdown Nav -->
                 <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4">
 
-                    <ul class="space-y-2">
-                        <li>
-                            <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                                <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>E-commerce</span>
-                                <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <ul id="dropdown-example2" class="hidden py-2 space-y-2">
-                                <li>
-                                    <a href="#"
-                                       class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Products</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Billing</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                       class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Invoice</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="opcion-con-desplegable">
-                            <div class="flex items-center justify-between p-2 hover:bg-gray-700">
-                                <div class="flex items-center">
-                                    <i class="fas fa-calendar-alt mr-2"></i>
-                                    <span>Agenda</span>
-                                </div>
-                                <i class="fas fa-chevron-down text-xs"></i>
-                            </div>
-                            <ul class="desplegable ml-4 hidden">
-                                <li>
-                                    <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
-                                        <i class="fas fa-chevron-right mr-2 text-xs"></i>
-                                        Gestion de citas
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
-                                        <i class="fas fa-chevron-right mr-2 text-xs"></i>
-                                        Polizas
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <!-- Agrega más enlaces para la navegación lateral -->
-                    </ul>
-
-
-                    <button data-popover-target="notifications-menu" class="rounded-md border border-transparent p-2.5 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 pointer-events-none">
-                        <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />                    
-                        </svg> 
-
-                    </button>
-                    <ul
-                        role="menu"
-                        data-popover="notifications-menu"
-                        data-popover-placement="bottom"
-                        class="absolute z-10 min-w-[180px] overflow-auto rounded-lg border border-slate-200  p-1.5 shadow-lg shadow-sm focus:outline-none"
-                        >
-                        <li
-                            role="menuitem"
-                            class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                            >
-                            <img
-                                alt="tania andrew"
-                                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
-                                class="relative inline-block h-10 w-10 rounded-full object-cover object-center"
-                                />
-                            <div class="flex flex-col gap-1 ml-4">
-                                <p class="text-slate-800 font-medium">
-                                    Tania send you a message
-                                </p>
-                                <p class="text-slate-500 text-sm flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-1 text-slate-400">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z" clip-rule="evenodd" />
-                                    </svg>
-
-                                    13 minutes ago
-                                </p>
-                            </div>
-                        </li>
-                        <li
-                            role="menuitem"
-                            class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                            >
-                            <img
-                                alt="natali craig"
-                                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1061&amp;q=80"
-                                class="relative inline-block h-10 w-10 rounded-full object-cover object-center"
-                                />
-                            <div class="flex flex-col gap-1 ml-4">
-                                <p class="text-slate-800 font-medium">
-                                    Natali replied to your email.
-                                </p>
-                                <p class="text-slate-500 text-sm flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-1 text-slate-400">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z" clip-rule="evenodd" />
-                                    </svg>
-                                    1 hour ago
-                                </p>
-                            </div>
-                        </li>
-                        <li
-                            role="menuitem"
-                            class="cursor-pointer text-slate-800 flex w-full text-sm items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
-                            >
-                            <img
-                                alt="paypal"
-                                src="https://dwglogo.com/wp-content/uploads/2016/08/PayPal_Logo_Icon.png"
-                                class="relative inline-block h-10 w-10 rounded-full  object-cover object-center"
-                                />
-                            <div class="flex flex-col gap-1 ml-4">
-                                <p class="text-slate-800 font-medium">
-                                    You&apos;ve received a payment.
-                                </p>
-                                <p class="text-slate-500 text-sm flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-1 text-slate-400">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z" clip-rule="evenodd" />
-                                    </svg>
-                                    5 hours ago
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
 
                     <a href="#" id="dashboardLinkMovil" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
                         <i class="fas fa-tachometer-alt mr-3"></i>
                         Dashboard
                     </a>
-
-
-
-                    <a href="#" id="empleadoLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                        <i class="fas fa-calendar mr-3"></i>
-                        Empleado
+                    <a href="#" data-popover-target="menu"  class="flex items-center active-nav-link text-white py-2 pl-6 nav-item">
+                        <i class="fas fa-tv-retro mr-3"></i>
+                        Componentes Movil
                     </a>
-                    <a href="#" id="homeLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                    <ul
+                        role="menu"
+                        data-popover="menu"
+                        data-popover-placement="bottom"
+                        class="absolute z-10 min-w-[180px] overflow-auto rounded-lg border border-slate-200 bg-black p-1.5 shadow-lg shadow-sm focus:outline-none"
+                        >
+
+                        <li>
+                            <a href="#" id="empleadoLinkMovil"
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                                <i class="fas fa-calendar mr-3"></i>
+                                Empleado
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="graficaLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                                <i class="fas fa-calendar mr-3"></i>
+                                Grafica
+                            </a>  </li>
+                        <li>
+                            <a href="#" id="j2htmlLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                j2html
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="loginLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                Login
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="registrarseLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                Registrarse
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="darkmodeLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                Darkmode
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="#" id="jmoordbJ2hmtlLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                JmoordbJ2hmtl
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="aboutUsLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                About US
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="tailwindLinkMovil"
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                Tailwind
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="chartjsLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                ChartJS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="mapaLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                Mapa
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <a href="#" id="homeLinkMovil" 
+                       class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
                         <i class="fas fa-calendar mr-3"></i>
                         Home
                     </a>
-                    <a href="#" id="graficaLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
-                        <i class="fas fa-calendar mr-3"></i>
-                        Grafica
-                    </a>
+
 
                     <a href="#" id="tableLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
                         <i class="fas fa-table mr-3"></i>
@@ -638,32 +418,9 @@
                         <i class="fas fa-sticky-note mr-3"></i>
                         Blank Page
                     </a>
-                    <a href="#" id="tailwindLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                        <i class="fas fa-sticky-note mr-3"></i>
-                        Tailwind
-                    </a>
-                    <a href="#" id="chartjsLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                        <i class="fas fa-sticky-note mr-3"></i>
-                        ChartJS
-                    </a>
-                    <a href="#" id="mapaLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                        <i class="fas fa-sticky-note mr-3"></i>
-                        Mapa
-                    </a>
 
-                    <a href="#" id="j2htmlLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                        <i class="fas fa-sticky-note mr-3"></i>
-                        j2html
-                    </a>
 
-                    <a href="#" id="jmoordbJ2hmtlLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                        <i class="fas fa-sticky-note mr-3"></i>
-                        JmoordbJ2hmtl
-                    </a>
-                    <a href="#" id="aboutUsLinkMovil" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                        <i class="fas fa-sticky-note mr-3"></i>
-                        About US
-                    </a>
+
 
 
 
@@ -899,6 +656,15 @@
                 $('#j2htmlLink').on('click', function () {
                     loadContent('/api/view/j2html');
                 });
+                $('#loginLink').on('click', function () {
+                    loadContent('/api/view/login');
+                });
+                $('#registrarseLink').on('click', function () {
+                    loadContent('/api/view/registrarse');
+                });
+                $('#darkmodeLink').on('click', function () {
+                    loadContent('/api/view/darkmode');
+                });
 
                 $('#jmoordbJ2hmtlLink').on('click', function () {
                     loadContent('/api/view/jmoordbj2html');
@@ -936,12 +702,30 @@
                 });
 
 
+
+                $('#dashboardMainLinkMovil').on('click', function () {
+                    loadContent('/api/view/dashboard');
+                });
+                $('#homeLinkMovil').on('click', function () {
+                    loadContent('/api/view/home');
+                });
+
+
                 $('#aboutUsLinkMovil').on('click', function () {
                     loadContent('/api/view/about');
                 });
 
                 $('#j2htmlLinkMovil').on('click', function () {
                     loadContent('/api/view/j2html');
+                });
+                $('#loginLinkMovil').on('click', function () {
+                    loadContent('/api/view/login');
+                });
+                $('#registrarseLinkMovil').on('click', function () {
+                    loadContent('/api/view/registrarse');
+                });
+                $('#darkmodeLinkMovil').on('click', function () {
+                    loadContent('/api/view/darkmode');
                 });
 
                 $('#jmoordbJ2hmtlLinkMovil').on('click', function () {
@@ -1021,5 +805,7 @@
                 dropdownContent.classList.toggle('hidden');
             });
         </script>
+        
+      
     </body>
 </html>

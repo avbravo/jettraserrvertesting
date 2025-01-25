@@ -10,6 +10,7 @@ import com.avbravo.jettraserverhelloworld.controller.HelloController;
 import com.avbravo.jettraserverhelloworld.view.BlankView;
 import com.avbravo.jettraserverhelloworld.view.CalendarView;
 import com.avbravo.jettraserverhelloworld.view.ChartJSView;
+import com.avbravo.jettraserverhelloworld.view.DarkModeView;
 import com.avbravo.jettraserverhelloworld.view.DashboardView;
 import com.avbravo.jettraserverhelloworld.view.EmpleadoView;
 import com.avbravo.jettraserverhelloworld.view.FormsView;
@@ -20,6 +21,7 @@ import com.avbravo.jettraserverhelloworld.view.J2htmlView;
 import com.avbravo.jettraserverhelloworld.view.JmoordbJ2htmlView;
 import com.avbravo.jettraserverhelloworld.view.LoginView;
 import com.avbravo.jettraserverhelloworld.view.MapaView;
+import com.avbravo.jettraserverhelloworld.view.RegistrarseView;
 import com.avbravo.jettraserverhelloworld.view.TableView;
 import com.avbravo.jettraserverhelloworld.view.TabsView;
 import com.avbravo.jettraserverhelloworld.view.TailwindView;
@@ -89,6 +91,8 @@ public class Start {
                         classes.add(FormsView.class);
                         classes.add(BlankView.class);
                         classes.add(DashboardView.class);
+                        classes.add(RegistrarseView.class);
+                        classes.add(DarkModeView.class);
                         return classes;
                     }
                 }

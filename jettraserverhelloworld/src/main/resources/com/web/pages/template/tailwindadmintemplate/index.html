@@ -94,7 +94,7 @@
                                     title="Componentes"
                                     />-->
 
-              
+
                 <ul
                     role="menu"
                     data-popover="menu"
@@ -128,7 +128,23 @@
                            class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
 
                             <i class="fas fa-sticky-note mr-3"></i>
-                          login
+                            login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="registrarseLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                            <i class="fas fa-sticky-note mr-3"></i>
+                            registrarse
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="darkmodeLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                            <i class="fas fa-sticky-note mr-3"></i>
+                           Darkmode
                         </a>
                     </li>
 
@@ -225,15 +241,15 @@
                 <div x-data="{ isOpen: false }" class="relative w-1/2 flex justify-end">
                     <button @click="isOpen = !isOpen" class="realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
                         <!--<img src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400">-->
-                        
-                                            <img
-                                    alt="tania andrew"
-                                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
-                                    class="relative inline-block h-10 w-10 cursor-pointer rounded-full object-cover object-center"
-                                
-                                    title="Componentes"
-                                    />
-                        
+
+                        <img
+                            alt="tania andrew"
+                            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+                            class="relative inline-block h-10 w-10 cursor-pointer rounded-full object-cover object-center"
+
+                            title="Componentes"
+                            />
+
                     </button>
                     <button x-show="isOpen" @click="isOpen = false" class="h-full w-full fixed inset-0 cursor-default"></button>
                     <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
@@ -241,14 +257,28 @@
                         <a href="#" class="block px-4 py-2 account-link hover:text-white">Support</a>
                         <a href="#" class="block px-4 py-2 account-link hover:text-white">Sign Out</a>
                     </div>
+                    
+                                    <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+                    
                 </div>
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+</script>
             </header>
 
             <!-- Mobile Header & Nav -->
             <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
                 <div class="flex items-center justify-between">
                     <!--<a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>-->
-                      <a href="#" id="dashboardMainLinkMovil" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Jettra</a>
+                    <a href="#" id="dashboardMainLinkMovil" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Jettra</a>
                     <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
                         <i x-show="!isOpen" class="fas fa-bars"></i>
                         <i x-show="isOpen" class="fas fa-times"></i>
@@ -263,10 +293,10 @@
                         <i class="fas fa-tachometer-alt mr-3"></i>
                         Dashboard
                     </a>
-   <a href="#" data-popover-target="menu"  class="flex items-center active-nav-link text-white py-2 pl-6 nav-item">
-                    <i class="fas fa-tv-retro mr-3"></i>
-                    Componentes Movil
-                </a>
+                    <a href="#" data-popover-target="menu"  class="flex items-center active-nav-link text-white py-2 pl-6 nav-item">
+                        <i class="fas fa-tv-retro mr-3"></i>
+                        Componentes Movil
+                    </a>
 
                     <ul
                         role="menu"
@@ -302,6 +332,22 @@
 
                                 <i class="fas fa-sticky-note mr-3"></i>
                                 Login
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="registrarseLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                Registrarse
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="darkmodeLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                Darkmode
                             </a>
                         </li>
 
@@ -613,6 +659,12 @@
                 $('#loginLink').on('click', function () {
                     loadContent('/api/view/login');
                 });
+                $('#registrarseLink').on('click', function () {
+                    loadContent('/api/view/registrarse');
+                });
+                $('#darkmodeLink').on('click', function () {
+                    loadContent('/api/view/darkmode');
+                });
 
                 $('#jmoordbJ2hmtlLink').on('click', function () {
                     loadContent('/api/view/jmoordbj2html');
@@ -651,7 +703,7 @@
 
 
 
- $('#dashboardMainLinkMovil').on('click', function () {
+                $('#dashboardMainLinkMovil').on('click', function () {
                     loadContent('/api/view/dashboard');
                 });
                 $('#homeLinkMovil').on('click', function () {
@@ -668,6 +720,12 @@
                 });
                 $('#loginLinkMovil').on('click', function () {
                     loadContent('/api/view/login');
+                });
+                $('#registrarseLinkMovil').on('click', function () {
+                    loadContent('/api/view/registrarse');
+                });
+                $('#darkmodeLinkMovil').on('click', function () {
+                    loadContent('/api/view/darkmode');
                 });
 
                 $('#jmoordbJ2hmtlLinkMovil').on('click', function () {
@@ -747,5 +805,7 @@
                 dropdownContent.classList.toggle('hidden');
             });
         </script>
+        
+      
     </body>
 </html>
