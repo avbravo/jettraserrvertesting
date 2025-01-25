@@ -123,6 +123,14 @@
                             j2html
                         </a>
                     </li>
+                    <li>
+                        <a href="#" id="loginLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                            <i class="fas fa-sticky-note mr-3"></i>
+                          login
+                        </a>
+                    </li>
 
 
                     <li>
@@ -286,6 +294,14 @@
 
                                 <i class="fas fa-sticky-note mr-3"></i>
                                 j2html
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="loginLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                Login
                             </a>
                         </li>
 
@@ -594,6 +610,9 @@
                 $('#j2htmlLink').on('click', function () {
                     loadContent('/api/view/j2html');
                 });
+                $('#loginLink').on('click', function () {
+                    loadContent('/api/view/login');
+                });
 
                 $('#jmoordbJ2hmtlLink').on('click', function () {
                     loadContent('/api/view/jmoordbj2html');
@@ -646,6 +665,9 @@
 
                 $('#j2htmlLinkMovil').on('click', function () {
                     loadContent('/api/view/j2html');
+                });
+                $('#loginLinkMovil').on('click', function () {
+                    loadContent('/api/view/login');
                 });
 
                 $('#jmoordbJ2hmtlLinkMovil').on('click', function () {

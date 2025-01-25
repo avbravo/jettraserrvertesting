@@ -3,8 +3,6 @@
  */
 package com.avbravo.jettraserverhelloworld.start;
 
-import com.avbravo.jettraserverhelloworld.annotationprocessor.Car;
-import com.avbravo.jettraserverhelloworld.annotationprocessor.CarBuilder;
 import com.avbravo.jettraserverhelloworld.configuration.JakartaRestConfiguration;
 import com.avbravo.jettraserverhelloworld.controller.CountryController;
 import com.avbravo.jettraserverhelloworld.controller.EmployeeController;
@@ -20,6 +18,7 @@ import com.avbravo.jettraserverhelloworld.view.template.AboutView;
 import com.avbravo.jettraserverhelloworld.view.HomeView;
 import com.avbravo.jettraserverhelloworld.view.J2htmlView;
 import com.avbravo.jettraserverhelloworld.view.JmoordbJ2htmlView;
+import com.avbravo.jettraserverhelloworld.view.LoginView;
 import com.avbravo.jettraserverhelloworld.view.MapaView;
 import com.avbravo.jettraserverhelloworld.view.TableView;
 import com.avbravo.jettraserverhelloworld.view.TabsView;
@@ -53,8 +52,8 @@ public class Start {
               /**
          * Con RootPath
          */
-  //String host="localhost";
-  String host="192.168.60.243";
+  String host="localhost";
+  //String host="192.168.60.243";
    //      String host="192.168.50.116";
         JettraServer local = new JettraServer.Builder()
                 .protocol(Protocol.HTTP)
@@ -81,6 +80,7 @@ public class Start {
                         classes.add(HomeView.class);
                         classes.add(AboutView.class);
                         classes.add(EmpleadoView.class);
+                        classes.add(LoginView.class);
                         classes.add(J2htmlView.class);
                         classes.add(JmoordbJ2htmlView.class);
                         classes.add(TableView.class);
