@@ -60,10 +60,13 @@ this.getClass().getClassLoader().getResourceAsStream("myFeatures.properties");
 
 # maven-jar-plugin
 mvn clean package
+
 # maven-assembly-plugin
 mvn clean package -Passembly
+
 # maven-shade-plugin
 mvn clean package -Pshade
+
 # onejar-maven-plugin
 mvn clean package -Ponejar
 And to run executable JAR we may do it this way:
