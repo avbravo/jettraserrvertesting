@@ -62,8 +62,11 @@ public class CountryController implements Serializable, JettraConfig {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response updateEmployee(Country country) throws URISyntaxException {
+    public Response updateCountry(Country country) throws URISyntaxException {
         try {
+            System.out.println("---------------------------UPDATE----------------------------");
+            System.out.println("country  "+country.toString());
+            System.out.println("--------------------------------------------------------");
             countryRepository.update(country);
         } catch (Exception e) {
             System.out.println("error " + e.getLocalizedMessage());
