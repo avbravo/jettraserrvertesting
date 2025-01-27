@@ -157,6 +157,15 @@
                         </a>
                     </li>
                     <li>
+                        <a href="#" id="countryLink" 
+                           class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                            <i class="fas fa-sticky-note mr-3"></i>
+                            Country
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
                         <a href="#" id="aboutUsLink" 
                            class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
                             <i class="fas fa-sticky-note mr-3"></i>
@@ -359,6 +368,16 @@
                                 JmoordbJ2hmtl
                             </a>
                         </li>
+                        <li>
+                            <a href="#" id="countryLinkMovil" 
+                               class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
+                                <i class="fas fa-sticky-note mr-3"></i>
+                                Country
+                            </a>
+                        </li>
+                        
+                        
+                        
                         <li>
                             <a href="#" id="aboutUsLinkMovil" 
                                class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-6 nav-item">
@@ -656,6 +675,9 @@
                 $('#j2htmlLink').on('click', function () {
                     loadContent('/api/view/j2html');
                 });
+                $('#countryLink').on('click', function () {
+                    loadContent('/api/view/country');
+                });
                 $('#loginLink').on('click', function () {
                     loadContent('/api/view/login');
                 });
@@ -730,6 +752,9 @@
 
                 $('#jmoordbJ2hmtlLinkMovil').on('click', function () {
                     loadContent('/api/view/jmoordbj2html');
+                });
+                $('#countryLinkMovil').on('click', function () {
+                    loadContent('/api/view/country');
                 });
 
                 $('#chartjsLinkMovil').on('click', function () {

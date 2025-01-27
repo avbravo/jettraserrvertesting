@@ -10,6 +10,7 @@ import com.avbravo.jettraserverhelloworld.controller.HelloController;
 import com.avbravo.jettraserverhelloworld.view.BlankView;
 import com.avbravo.jettraserverhelloworld.view.CalendarView;
 import com.avbravo.jettraserverhelloworld.view.ChartJSView;
+import com.avbravo.jettraserverhelloworld.view.CountryView;
 import com.avbravo.jettraserverhelloworld.view.DarkModeView;
 import com.avbravo.jettraserverhelloworld.view.DashboardView;
 import com.avbravo.jettraserverhelloworld.view.EmpleadoView;
@@ -93,6 +94,7 @@ public class Start {
                         classes.add(DashboardView.class);
                         classes.add(RegistrarseView.class);
                         classes.add(DarkModeView.class);
+                        classes.add(CountryView.class);
                         return classes;
                     }
                 }
