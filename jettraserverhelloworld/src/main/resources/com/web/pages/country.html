@@ -128,7 +128,7 @@
         $('#countryForm').on('submit', function (e) {
             e.preventDefault();
             var country = {
-                idcountry: $('#idcountry').val(),
+                idcountry: $('#countryID').val(),
                 country: $('#country').val(),
 
             };
@@ -148,7 +148,7 @@
         $('#updateButton').on('click', function () {
 
             var country = {
-                idcountry: $('countryid').val(),
+                idcountry: $('countryID').val(),
                 country: $('#country').val(),
 
             };
