@@ -95,7 +95,7 @@ public class CountryController implements Serializable, JettraConfig {
     @DELETE
     @Path("{id}")
     public Response delete(@PathParam("id") String id) {
-        
+        System.out.println(">>>> delete "+id);
          countryRepository.deleteByPk(id);
 
         return Response.ok().build();
