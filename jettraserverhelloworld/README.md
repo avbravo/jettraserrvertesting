@@ -414,3 +414,8 @@ String mongodbDatabase =getMicroprofileConfig("mongodb.database");
 
 [Tailwind Toolbox - Admin Dashboard Template](https://github.com/tailwindtoolbox/Admin-Template)
 
+
+
+
+mvn clean compile exec:java -Dexec.mainClass="com.avbravo.jettraserverhelloworld.start.Start" --no-transfer-progress process-classes org.codehaus.mojo:exec-maven-plugin:3.1.0:exec
+
