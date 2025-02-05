@@ -16,7 +16,11 @@
         <version.jmoordbencripter>2.0</version.jmoordbencripter>
     </properties>
     <dependencies>
-
+<dependency>
+    <groupId>org.jboss.narayana.jta</groupId>
+    <artifactId>narayana-jta</artifactId>
+    <version>5.12.0.Final</version> <!-- Use the latest version -->
+</dependency>
         <dependency>
             <groupId>com.jettraserver</groupId>
             <artifactId>jettraserver</artifactId>
@@ -36,11 +40,11 @@
             <artifactId>jte</artifactId>
             <version>3.1.15</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
             <version>14.0.0</version>
-        </dependency>
+        </dependency>-->
 
         
         

@@ -30,11 +30,20 @@ import com.avbravo.jettraserverhelloworld.view.template.TemplateView;
 import com.jettraserver.JettraServer;
 import com.jettraserver.enumerations.Protocol;
 import com.jettraserver.health.JettraHealthController;
+import jakarta.transaction.HeuristicMixedException;
+import jakarta.transaction.HeuristicRollbackException;
+import jakarta.transaction.NotSupportedException;
+import jakarta.transaction.RollbackException;
+import jakarta.transaction.SystemException;
+import jakarta.transaction.TransactionManager;
+
 import jakarta.ws.rs.SeBootstrap.Configuration.SSLClientAuthentication;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
+
+import jakarta.transaction.UserTransaction;
 
 /**
  *
@@ -42,9 +51,12 @@ import java.util.concurrent.ExecutionException;
  */
 public class Start {
 
-    public static void main(String[] args) throws InterruptedException, ExecutionException, IOException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException, IOException, NotSupportedException, SystemException, RollbackException, HeuristicMixedException, HeuristicRollbackException {
       
-        
+//          UserTransaction userTransaction = TransactionManager.userTransaction();
+//        userTransaction.begin();
+//        // Perform transactional work
+//        userTransaction.commit();
 //         Car car = new CarBuilder()
 //                 .setMarca("Toyota")
 //                 .setModelo("Corolla")
@@ -55,8 +67,8 @@ public class Start {
               /**
          * Con RootPath
          */
-  //String host="localhost";
-  String host="192.168.60.243";
+  String host="localhost";
+//  String host="192.168.60.243";
    //      String host="192.168.50.116";
         JettraServer local = new JettraServer.Builder()
                 .protocol(Protocol.HTTP)
